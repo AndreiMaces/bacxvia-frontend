@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+
+  <head>
+  
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="index.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  </head>
+
+  <body>
+	
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container-fluid">
+	  
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".baraNavigatie">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>  
+			</button>
+			<li class="navbar-brand" href="#">Bacxvia</li>	
+		</div>
+	  
+		<div class="collapse navbar-collapse baraNavigatie">
+		
+			<ul class="nav navbar-nav">
+			  <li><a href="../index.html">Acasa</a></li>
+			
+			  <li class="dropdown active">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Matematica <span class="caret"></span></a>
+			    <ul class="dropdown-menu">
+				
+				  <li><a href="SubiecteMatematica/S1.html">Subiectul 1</a></li>
+				  <li><a href="SubiecteMatematica/S2.html">Subiectul 2</a></li>
+				  <li><a href="SubiecteMatematica/S3.html">Subiectul 3</a></li>
+				
+				</ul>
+			  </li>
+			  
+			  
+			  <li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Romana <span class="caret"></span></a>
+			    <ul class="dropdown-menu">
+				
+				  <li><a href="SubiecteRomana/S1.html">Subiectul 1</a></li>
+				  <li><a href="SubiecteRomana/S2.html">Subiectul 2</a></li>
+				  <li><a href="SubiecteRomana/S3.html">Subiectul 3</a></li>
+				
+				</ul>
+			  </li>
+			  
+			</ul>
+			
+			<div class="navbar-form navbar-left">
+			  <div class="input-group">
+				<input type="text" class="form-control cautare" placeholder="Cauta" name="search">
+				<div class="input-group-btn">
+				  <button class="btn btn-default" onclick="cauta()">
+					<i class="glyphicon glyphicon-search"></i>
+				  </button>
+				</div>
+			  </div>
+			</div>
+			
+		</div>
+	  </div>
+	</nav>
+	
+  </body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+
+  <head>
+  
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type ="text/css" href="../../../Tools/katex/katex.min.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="index.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="../../../Tools/math.js" type="text/javascript"></script>
+	<script src="../../../Tools/algebra-0.2.6.min.js" type="text/javascript"></script>
+	<script defer src = "../../../Tools/katex/katex.min.js"></script>
+	<script defer src = "../../../Tools/katex/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+	<script defer src="../../../Tools/katex/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>   
+  </head>
+
+  <body>
+	
+	<nav class="navbar navbar-default navbar-fixed-top">
+         <div class="container-fluid">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".baraNavigatie">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>  
+               </button>
+               <li class="navbar-brand Logo" href="#">Bacxvia</li>
+			   <style>.Logo:hover{cursor:default;}</style>
+            </div>
+            <div class="collapse navbar-collapse baraNavigatie">
+               <ul class="nav navbar-nav">
+                  <li><a href="../index.html">Acasa</a></li>
+				  
+               <li class="active">
+				<a href="../../../SubiecteMatematica/Matematica.html">Matematica</a>
+			  </li>
+			  
+			  
+			  <li>
+				<a href="../../../SubiecteRomana/Romana.html">Romana</a>
+			  </li>
+				  
+               </ul>
+            </div>
+         </div>
+      </nav>
+	
+	<div class="container" style="text-align: center;">
+		<div class="input-group">
+			<span class="input-group-addon">n</span>
+			<input type="text" class="form-control panou n" placeholder="Introduceti numarul n">
+		</div><br>
+		
+		<div class="input-group">
+			<span class="input-group-addon">k</span>
+			<input type="text" class="form-control panou k" placeholder="Introduceti numarul k">
+		</div><br>
+		
+		<div class="input-group">
+			<span class="input-group-addon">a</span>
+			<input type="text" class="form-control panou a" placeholder="Introduceti numarul a">
+		</div><br>
+		
+		<div class="input-group">
+			<span class="input-group-addon">b</span>
+			<input type="text" class="form-control panou b" placeholder="Introduceti numarul b">
+		</div><br>
+		
+		<center><button class="btn btn-default" onclick="calcC()">Combinari</button></center><br>
+		<center><button class="btn btn-default" onclick="calcP()">Permutari</button></center><br>
+		<center><button class="btn btn-default" onclick="calcA()">Aranjamente</button></center><br>
+		<center><button class="btn btn-default" onclick="binom()">Binomul lui Newton</button></center><br>
+		<h2 class="raspuns"></h2>
+	</div>
+	
+	<script>
+	
+		String.prototype.removeAt = function(index, length) {
+    return this.substr(0, index) + this.substr(index + length);
+	}
+	
+		var n;
+		var k;
+		var a;
+		var b;
+		function fact(x)
+		{
+			if(x < 0) return null;
+			else if(x == 0 || x == 1) return 1;
+			else return fact(x - 1) * x;
+		}
+		
+		function calcC()
+		{
+			n = $('.n').val();
+			k = $('.k').val();
+			$(".raspuns").html(( fact(n) / (fact(n - k) * fact(k)) ));
+		}
+		
+		function calcP()
+		{
+			n = $('.n').val();
+			k = $('.k').val();
+			$(".raspuns").html(fact(n));
+		}
+		
+		function calcA()
+		{
+			n = $('.n').val();
+			k = $('.k').val();
+			$(".raspuns").html(( fact(n) / fact(n - k) ));
+		}
+		
+		function binom()
+		{
+			a = $('.a').val();
+			b = $('.b').val();
+			n = $('.n').val();
+			var raspuns = "\\(" + ("(" + a + "+" + b + ")^{" + n + "}") + " = " ;
+			for(i = 0 ; i <= n ; i++)
+			raspuns += "C_{" + n + "}^{" + i + "}" + a + "^{" + (n-i) + "}" + b + "^{" + i + "} + ";
+			//raspuns[raspuns.length - 2] = null;
+			raspuns = raspuns.removeAt(raspuns.length - 3, 2);
+			raspuns += " = " + math.simplify("(" + a + "+" + b + ")^" + n) + "\\)";
+			$('.raspuns').html(raspuns);
+			renderMathInElement(document.body);
+			//var htmlK = document.getElementsByClassName('katex-html');
+			//for(var i = 0 ; i < htmlK.length ; i++)
+			//htmlK[i].style.display = "none";
+		}
+	
+	</script>
+	
+  </body>
+
+</html>

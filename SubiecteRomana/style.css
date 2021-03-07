@@ -1,0 +1,233 @@
+*
+{
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+}
+
+.romana
+{
+	width: 50vw;
+	height: 100vh;
+	background: black;
+	text-align: center;
+	font-size: 40px;
+}
+
+.mate
+{
+	width: 50vw;
+	height: 100vh;
+	background: red;
+	text-align: center;
+	font-size: 40px;
+}
+
+.flex-container
+{
+	display: flex;
+}
+
+.romana h1
+{
+	position: absolute;
+	top: 50%;
+	transform: translate(0% , -50%);
+	width: 50%;
+}
+
+.mate h1
+{
+	position: absolute;
+	top: 50%;
+	transform: translate(0% , -50%);
+	width: 50%;
+}
+
+.white
+{
+	color: white;
+}
+
+.fe
+{
+	width: 33.2%;
+	display: inline-block;
+	height: 20vh;
+	text-align: center;
+	background: yellow;
+	margin: 0 0 0 -4px;
+	border: 1px solid black;
+}
+
+.fe h1
+{
+	line-height: 20vh;
+}
+
+.yellow
+{
+	color: yellow;
+}
+
+.s
+{
+	width: 100vw;
+	height: 32.9vh;
+	background: #42a7f5;
+	border: 0.3vh solid cyan;
+	text-align: center;
+	font-size: 2vw;
+	
+}
+
+.s h1
+{
+	line-height: 32.9vh;
+	color: white;
+	text-shadow: 2px 2px 3px black;
+}
+
+.sr
+{
+	overflow: hidden;
+}
+
+.matrice
+{
+	display: flex;
+	box-shadow: 2px 2px 5px black;
+	padding: 30px;
+}
+
+.element
+{
+	width: 50px;
+	height: 50px;
+	border: 1px solid black;
+	font-size: 30px;
+	background: grey;
+}
+
+.determinant
+{
+	margin: 2vh 2vw;
+	font-size: 2vw;
+	border: 1px solid black;
+	background: grey;
+}
+
+
+a
+{
+	color: black;
+}
+
+.det
+{
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+
+.Comentariu
+{
+	font-size: 20px;
+}
+
+object
+{
+	width: 100%;
+	height: 90vh;
+}
+
+.Swapper
+{
+	transition: 1s;
+}
+
+.Comentariu
+{
+	border: 1px solid black;
+	margin: 10px;
+	padding: 30px;
+	box-shadow: 0 0 2px black;
+}
+
+.Comentariu h1
+{
+	font-weight: bold;
+	text-align: center;
+	padding: 10px;
+	text-decoration: underline;
+}
+
+.Comentariu p
+{
+	padding: 10px;
+	text-indent: 30px;
+}
+
+.Comentariu h2
+{
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+ @media only screen and (max-width: 800px) {
+	 
+	 .Comentariu h1
+	 {
+		font-size: 25px;
+	 }
+	 
+	 .Comentariu h2
+	 {
+		font-size: 20px;
+	 }
+	 
+	.Comentariu p
+	{
+		font-size: 15px;
+	}
+ }
+
+
+@keyframes Fade
+{
+	0%
+	{
+		opacity: 0;
+	}
+	
+	100%
+	{
+		opacity: 1;
+	}
+}
+
+.fade
+{
+	animation-name : Fade;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+.navbar {
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+}
+
+.fcenter
+{
+	position: relative;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50% , -50%);
+	text-align: center;
+}
+
+.btn {
+    white-space:normal !important;
+    word-wrap: break-word; 
+}

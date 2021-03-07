@@ -1,0 +1,1261 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+      <link rel="stylesheet" href="../Tools/bootstrap.css">
+      <script src="../Tools/jQuery.js"></script>
+      <script src="../Tools/bootstrap.js"></script>
+      <script src="index.js"></script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <!--<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+	  <script type="text/javascript" id="MathJax-script" async src="../Tools/mathJax/tex-chtml"></script>-->
+	  <link rel="stylesheet" type ="text/css" href="../Tools/katex/katex.min.css" />
+	  <script defer src = "../Tools/katex/katex.min.js"></script>
+	  <script defer src = "../Tools/katex/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+	  <script defer src="../Tools/katex/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+   </head>
+   <body>
+	  <div class="loader">
+		<div class="fcenter" style="width: 80vw;">
+			<h1 class="pi" style="opacity: 1;">π = 3.14</h1>
+		</div>
+	  </div>
+	  <script>
+	 
+		var v = [1 ,5 ,9 ,2 ,6 ,5,3,5,8,9,7,9,3,2,3,8,4,6,2,6,4,3,3,8,3,2,7,9,5,0,2,8,8,4,1,9,7,1,6,9,3,9,9,3,7,5,1,0,5,8,2,0,9,7,4,9,4,4,5,9,2,3,0,7,8,1,6,4,0,6,2,8,6,2,0,8,9,9,8,6,2,8,0,3,4,8,2,5,3,4,2,1,1];
+		var p = 1;
+		var i = 0;
+		
+		function adauga()
+		{
+			if(p == 0) return;
+			if(($('.pi').html()).length < 50)
+				{
+				console.log($('.pi').html());
+					$(".pi").append(v[i]);
+					i++;
+					
+					setTimeout(function() {
+					adauga();
+					}, 50);
+					
+					
+				}
+			else {
+			$('.pi').html('π = 3.14');
+			i = 0;
+			adauga();
+			}
+		}
+		adauga();
+	  
+	  </script>
+	  <style>
+		.fullyCentered
+		{
+			position: absolute;
+			z-index: 10001;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50% , -50%);
+			width: 80vw;
+		}
+		.loader
+		{
+			width: 100vw;
+			height: 100vh;
+			overflow: hidden;
+			background-color: white;
+			position: fixed;
+			z-index: 1000000;
+		}
+	  </style>
+	  <script>
+		
+		$(document).ready(function() {p = 0;$('.loader').css("display" , "none");});
+		
+	 </script>
+      <nav class="navbar navbar-default navbar-fixed-top">
+	  
+         <div class="container-fluid">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".baraNavigatie">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>  
+               </button>
+               <li class="navbar-brand Logo" href="#">Bacxvia</li>
+			   <style>.Logo:hover{cursor:default;}</style>
+            </div>
+            <div class="collapse navbar-collapse baraNavigatie">
+               <ul class="nav navbar-nav">
+                  <li><a href="../index.html">Acasa</a></li>
+				  
+               <li class="active">
+				<a href="../SubiecteMatematica/Matematica.html">Matematica</a>
+			  </li>
+			  
+			  
+			  <li>
+				<a  href="../SubiecteRomana/Romana.html">Romana</a>
+			  </li>
+				  
+               </ul>
+            </div>
+         </div>
+      </nav>
+	  
+	  <div class="jumbotron" style="height: 40vh;">
+		<h1 class="fcenter fade">Matematica</h1>
+	  </div>
+	  
+      <div class="container">
+         <table class="table table-hover tabelCautare" style="display: none;"></table>
+         <div class="CONTENT">
+            <div class="panel-group" id="Subiectul2">
+               <div class="panel panel-default">
+                  <!-- Algebra --> 
+                  <div class="panel-heading text-center">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#Subiectul2" href="#collapse1">Algebra</a>
+                     </h4>
+                  </div>
+                  <div id="collapse1" class="panel-collapse collapse">
+                     <div class="panel-body">
+                        <div class="panel-group" id="Algebra">
+							
+							 <div class="panel panel-default">
+                  <!-- Functii -->
+                  <div class="panel-heading text-center">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#Algebra" href="#collapse10">Functii</a>
+                     </h4>
+                  </div>
+                  <div id="collapse10" class="panel-collapse collapse">
+                     <div class="panel-body">
+                        <p>
+                           Punctul <b>\(A(a , b)\)</b> se afla pe graficul functiei daca <b>\(f(a) = b\)</b>
+                        </p>
+                        <p>Pentru a afla punctele de intersectie dintre graficele a doua functii f si g se rezolva sistemul:<br>
+                           $$\begin{cases}
+						   y = f(x) \\
+                           y = g(x)
+						   \end{cases}$$
+                           Solutiile (x , y) reprezinta coordonatele punctelor de intersectie.
+                        </p>
+                        <p><b>Inversa functiei f:</b> <br>
+                           Daca <b>\(f(x) = y\)</b> atunci <b>\(f^{-1}(y) = x\)</b>
+                        </p>
+                        <p><b>Intersectia cu Ox a graficului functiei f:</b><br>
+                           Se rezolva ecuatia <b>\(f(x) = 0\)</b><br>
+                           Daca x este o solutie a ecuatiei \(f(x) = 0\) atunci punctul <b>\(A(x , 0)\)</b> este un punct de intersectie dintre axa Ox si graficul functiei f.
+                        </p>
+                        <p><b>Intersectia cu Oy a graficului functiei:</b><br>
+                           Se calculeaza \(f(0)\) daca 0 e in domeniul de definitie.<br>
+                           Punctul \(B(0 , f(0))\) reprezinta intersectia dintre axa Oy si graficul functiei f.<br>
+                           In cazul in care 0 nu se afla in domeniul de definitie al functiei , graficul functiei nu taie axa Oy.
+                        </p>
+                        <a class="btn btn-default" style="float: right;" href="S1/Functii/Tool-uri.html">Tool-uri</a>
+                        <a class="btn btn-default" style="float: left;" href="S1/Functii/ExercitiiRezolvate.html">Exercitii rezolvate</a>
+                     </div>
+                  </div>
+               </div>
+							
+                           <div class="panel panel-default">
+                              <!-- Functia de gradul 2 -->
+                              <div class="panel-heading text-center">
+                                 <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#Algebra" href="#collapse11">Functia de gradul 2</a>
+                                 </h4>
+                              </div>
+                              <div id="collapse11" class="panel-collapse collapse">
+                                 <div class="panel-body">
+                        <p>Varful parabolei este: <span style="font-weight: bold;">\(V(\cfrac{-b}{2a} , \cfrac{-Δ}{4a})\)</span><br>
+                           - daca <span style="font-weight: bold;">a > 0</span> varful este punct de minim:<br>
+                           -\(\cfrac{Δ}{4a}\) este <b>valoare minima</b> iar \(\cfrac{-b}{2a}\) este <b>punct de minim</b><br>
+                           - daca <b>a < 0 </b>este punct de maxim:<br>
+                           -\(\cfrac{Δ}{4a}\) este <b>valoare maxima</b> iar \(\cfrac{-b}{2a}\) este <b>punct de maxim</b>
+                        </p>
+                        <p>Graficul functiei de gradul doi e tangent la axa Ox daca are <b>Δ = 0</b></p>
+                        <p>Graficul functiei de gradul doi e situat deasupra axei Ox daca are:<br>
+                           <b>Δ < 0<br>
+                           a > 0</b>
+                        </p>
+                        <p><b>Relatiile lui Viette</b><br>
+                           Pentru ecuatia de gradul doi cu radacini <b>\(x_1 , x_2\)</b> , au loc relatiile:<br>
+                           <b>\(x_1 + x_2 = \frac{-b}{a}\)<br>
+                           \(x_1 · x_2 = \frac{c}{a}\)</b>
+                        </p>
+                        <p><b>Observatie: \(x_1^2 + x_2^2 = (x_1 + x_2)^2 - 2x_1x_2 = (\frac{-b}{a})^2 - \frac{2c}{a}\)</b></p>
+                        <p><b>Ecuatia cu radacini</b> \(x_1 , x_2\) este <b>\(x^2 - Sx + P = 0\)</b> unde <b>\(S = x_1 + x_2\)</b> iar <b>\(P = x_1 · x_2\)</b></p>
+                        <p>Conditia ca <b>\(a^2 + bx + c >= 0\)</b> , x din R este <b>Δ <= 0 , a > 0</b><br>
+                           Conditia ca <b>\(a^2 + bx + c <= 0\)</b> , x din R este <b>Δ <= 0 , a < 0</b><br>
+                           Conditia ca <b>\(a^2 + bx + c > 0\)</b> , x din R este <b>Δ < 0 , a > 0</b><br>
+                           Conditia ca <b>\(a^2 + bx + c < 0\)</b> , x din R este <b>Δ < 0 , a < 0</b><br>
+                        </p>
+                        <p>Conditia ca ecuatia <b>\(a^2 + bx + c = 0\)</b> sa aibe doua solutii reale este <b>Δ > 0</b><br>
+                           Conditia ca ecuatia <b>\(a^2 + bx + c = 0\)</b> sa aibe doua solutii egale este <b>Δ = 0</b><br>
+                           Conditia ca ecuatia <b>\(a^2 + bx + c = 0\)</b> sa nu aibe solutii reale este <b>Δ < 0</b><br>
+                        </p>
+                        <a class="btn btn-default" style="float: right;" href="S1/FunctiaDeGradul2/Tool-uri.html">Tool-uri</a>
+                        <a class="btn btn-default" style="float: left;" href="S1/FunctiaDeGradul2/ExercitiiRezolvate.html">Exercitii rezolvate</a>
+                     </div>
+                              </div>
+                           </div>
+                           <div class="panel panel-default">
+                              <!-- Ecuatia de gradul 2 -->
+                              <div class="panel-heading text-center">
+                                 <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#Algebra" href="#collapse12">Ecuatia de gradul 2</a>
+                                 </h4>
+                              </div>
+                              <div id="collapse12" class="panel-collapse collapse">
+                                 <div class="panel-body">
+                                    
+									<p>Ecuatia \(ax^{2} + bx + c = 0\). Se calculeaza <b>\(Δ = b^{2} - 4ac\)</b><br>
+									Daca <b>\(Δ > 0\)</b> atunci ecuatia de gradul 2 are doua radacini reale diferite date de formula <b>\(x_{1,2} = \cfrac{-b ± \sqrtΔ}{2a}\)</b><br>
+									Daca <b>\(Δ = 0\)</b> atunci ecuatia de gradul 2 are doua radacini reale egale date de formula <b>\(x_{1,2} = -\cfrac{b}{2a}\)</b><br>
+									Daca <b>\(Δ < 0\)</b> atunci ecuatia de gradul 2 are doua radacini complexe diferite date de formula <b>\(x_{1,2} = \cfrac{-b ± i\sqrt{-Δ}}{2a}\)</b><br></p>
+									
+									<p><b>$$ax^{2} + bx + c = a(x - x_{1})(x - x_{2})$$</b></p>
+									
+									<p>Relatiile lui Viete pentru ecuatia de gradul 2<br>
+									<b>\(S = x_{1} + x_{2} = \cfrac{-b}{a}\)<br> <br>
+									\(P = x_{1} · x_{2} = \cfrac{c}{a} \) <br> <br>
+									\(x_{1}^{2} + x_{2}^{2} = S^{2} - 2P \)<br> <br>
+									\(x_{1}^{3} + x_{2}^{3} = S^{3} - 2SP\)</b></p>
+									
+                                    <a class="btn btn-default" style="float: right;" href="S1/EcuatiaDeGradul2/Tool-uri.html">Tool-uri</a>
+                                    <a class="btn btn-default" style="float: left;" href="S1/EcuatiaDeGradul2/ExercitiiRezolvate.html">Exercitii rezolvate</a>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="panel panel-default">
+                              <!-- Progresii Aritmetice -->
+                              <div class="panel-heading">
+                                 <h4 class="panel-title text-center">
+                                    <a data-toggle="collapse" data-parent="#Algebra" href="#collapse13">Progresii aritmetice</a>
+                                 </h4>
+                              </div>
+                              <div id="collapse13" class="panel-collapse collapse">
+                                 <div class="panel-body">
+					 
+                        <p><span style="font-weight: bold;">Definitie:</span> Se numeste progresie aritmetica un sir de numere reale in
+                           care fiecare termen se obtine din termenul anterior adunand o
+                           constanta numita ratie (r)
+                        </p>
+                        <p><span style="font-weight: bold;">Proprietate:</span> Trei numere <span style="font-weight: bold;">a , b, c</span> sunt in progresie aritmetica daca <span style="font-weight: bold;">b</span> e 
+                           medie aritmetica intre <span style="font-weight: bold;">a</span> si <span style="font-weight: bold;">c</span> adica <span style="font-weight: bold;">$$b = {a + c \over 2} $$</span>
+                        </p>
+                        <p style="font-weight: bold;">$$a_n=a_1+(n - 1)r$$</p>
+                        <p><span style="font-weight: bold;">$$S_n = \frac{n(2a_1 + (n - 1)r)}{2}$$</span> <span style="font-weight: bold;">
+                           $$S_n = {a_1 + a_2 + a_3 + ... + a_n}$$</span>
+                        </p>
+                        <a class="btn btn-default" style="float: right;" href="S1/ProgresiiAritmetice/Tool-uri.html">Tool-uri</a>
+                        <a class="btn btn-default" style="float: left;" href="S1/ProgresiiAritmetice/ExercitiiRezolvate.html">Exercitii rezolvate</a>
+                     </div>
+                              </div>
+                           </div>
+                           <div class="panel panel-default">
+                              <!-- Progresii Geometrice -->
+                              <div class="panel-heading text-center">
+                                 <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#Algebra" href="#collapse14">Progresii geometrice</a>
+                                 </h4>
+                              </div>
+                              <div id="collapse14" class="panel-collapse collapse">
+                                 <div class="panel-body">
+                        <p><span style="font-weight: bold;">Definitie:</span>  Se numeste progresie geometrica un sir de numere reale in
+                           care fiecare termen se obtine din termenul anterior inmultind cu o
+                           constanta numita ratie (q). 
+                        </p>
+                        <p><span style="font-weight: bold;">Proprietate:</span> Trei numere <span style="font-weight: bold;">a , b, c</span> sunt in progresie geometrica cu termeni pozitivi daca <span style="font-weight: bold;">b</span> e 
+                           medie geometrica intre <span style="font-weight: bold;">a</span> si <span style="font-weight: bold;">c</span> adica \(b = \sqrt{ac}\)
+                        </p>
+                        <p>$$a_n=a_1q^n - 1$$</p>
+                        <p>$$S_n = \frac{a_1(q^n-1)}{q - 1}$$ 
+                           $$S_n = a_1 + a_2 + a_3 + ... + a_n$$
+                        </p>
+                        <a class="btn btn-default" style="float: right;" href="S1/ProgresiiGeometrice/Tool-uri.html">Tool-uri</a>
+                        <a class="btn btn-default" style="float: left;" href="S1/ProgresiiGeometrice/ExercitiiRezolvate.html">Exercitii rezolvate</a>
+                     </div>
+                              </div>
+                           </div>
+                           <div class="panel panel-default">
+                              <!-- Numere complexe --> 
+                              <div class="panel-heading text-center">
+                                 <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#Algebra" href="#collapse15">Numere complexe</a>
+                                 </h4>
+                              </div>
+                              <div id="collapse15" class="panel-collapse collapse">
+                                 <div class="panel-body">
+                                    
+									<p><b>\(Z = a + bi\)</b> este forma algebrica a unui numar complex</p>
+									<p><b>\(Z = r(\cos x + i\sin x)\)</b> este forma trigonometrica a unui numar complex unde: <br>
+									<b>\(r = \sqrt{a^{2} + b^{2}}\)</b><br>
+									<b>\(x &#x220A; [0 , 2π)\)</b> este argumentul redus al numarului complex si se scoate din relatia <b>\(tgx = \cfrac{b}{a}\)</b></p>
+									
+									<p><b>\(i^{2} = -1\)<br>
+									\(|a + bi| = \sqrt{a^{2} + b^{2}}\)<br>
+									</b></p>
+									
+									
+                                    <a class="btn btn-default" style="float: right;" href="S1/FunctiaDeGradul2/Tool-uri.html">Tool-uri</a>
+                                    <a class="btn btn-default" style="float: left;" href="S1/FunctiaDeGradul2/ExercitiiRezolvate.html">Exercitii rezolvate</a>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="panel panel-default">
+                              <!-- Combinatorica -->
+                              <div class="panel-heading text-center">
+                                 <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#Algebra" href="#collapse16">Elemente de combinatorica</a>
+                                 </h4>
+                              </div>
+                              <div id="collapse16" class="panel-collapse collapse">
+                                 <div class="panel-body">
+                                    <p><span style="font-weight: bold">Permutari de n</span> se noteaza \(P_n\)<br>
+                           <span style="font-weight: bold;">\(P_n=n!\)</span> si reprezinta <span style="font-weight: bold;">numarul de multimi ordonate</span> ce se pot forma	
+                           cu <span style="font-weight: bold;">n</span> elemente. 
+                        </p>
+                        <p>
+                           <span style="font-weight: bold;">Aranjamente de n luate cate k</span> se noteaza \(A_n^k\)
+                           <br>
+                           <span style="font-weight: bold;">\(A_n^k = \cfrac{n!}{(n-k)!}\)</span> reprezinta <span style="font-weight: bold;">numarul de submultimi ordonate</span> de cate <span style="font-weight: bold;">k</span> elemente ce se pot forma dintr-o multime de <span style="font-weight: bold;">n</span> elemente.
+                        </p>
+                        <p>
+                           <span style="font-weight: bold;">Combinari de n luate cate k</span> se noteaza \(C_n^k\)
+                           <br>
+                           <span style="font-weight: bold;">\(C_n^k = \cfrac{n!}{k!(n-k)!}\)</span>  <span style="font-weight: bold;">reprezinta nr de submultimi neordonate de cate k
+                           elemente</span> ce se pot forma dintr-o multime cu <span style="font-weight: bold">n</span> elemente. 
+                           <br>
+                           <span style="font-weight: bold;">$$C_n^0 + C_n^1 + C_n^2 + ... + C_n^n = 2^n$$</span>
+                        </p>
+                        <p><span style="font-weight: bold;">Numarul tuturor sumultimilor unei multimi cu n elemente este \(2^n\)</span>
+                        </p>
+                        <p><span style="font-weight: bold;">Numarul submultimilor cu cate k elemente ale unei multimi cu n
+                           elemente este \(C_n^k\)</span>
+                        </p>
+									
+                                    <p>
+									  Binomul lui Newton: <br>
+									  <center style="font-size: 20px;"><b>\((a + b)^{n} = C_{n}^{0}a^{n} + C_{n}^{1}a^{n-1}b + C_{n}^{2}a^{n-2}b^{2} + ... + C_{n}^{k}a^{n - k}b^{k} + ... + C_{n}^{n}b^{n}\)</b></center></p>
+									  
+									<p>Formula termenului general din binomul lui Newton este : <br>
+									<b>$$T_{k+1} = C_{n}^{k}a^{n-k}b^{k}$$</b></p>
+									
+									
+                                    <a class="btn btn-default" style="float: right;" href="S1/ElementeDeCombinatorica/Tool-uri.html">Tool-uri</a>
+                                    <a class="btn btn-default" style="float: left;" href="S1/ElementeDeCombinatorica/ExercitiiRezolvate.html">Exercitii rezolvate</a>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="panel panel-default">
+                              <!-- Logaritmi -->
+                              <div class="panel-heading text-center">
+                                 <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#Algebra" href="#collapse17">Logaritmi</a>
+                                 </h4>
+                              </div>
+                              <div id="collapse17" class="panel-collapse collapse">
+                                 <div class="panel-body">
+                        <p>
+                           <b>\(\log_a b\)</b> = puterea la care il ridic pe a astfel incat sa dea pe <b>b</b>.
+                        </p>
+                        <p>
+                           <b>\(\log_a b\)</b> exista doar pentru <b>\(a>0 , b>0 , a \not = 1\)</b>
+                        </p>
+                        <p>
+                           <b>\(\log_a {a^b} = b\) </b>(cu ajutorul acestei formule orice numar real poate fi scris ca \(\log\) in orice baza vreau) 
+                        </p>
+                        <p>
+                           <b>\(\log_a b = c\) </b>revine la <b>\(b = a^c\)</b>
+                        </p>
+                        <p>
+                           <b>\(\log_a b + \log_a^c = \log_a(bc)\)</b>
+                        </p>
+                        <p>
+                           <b>\(\log_a b - \log_a^c = \log_a(b/c)\)</b>
+                        </p>
+                        <p>
+                           <b>\(\log_a {b^p} = p \log_a b\)</b>
+                        </p>
+                        <p>
+                           <b>\(\log_a {p^b} = 1/p \log_a b\)</b>
+                        </p>
+                        <p>
+                           <b>\(\log_a b = 1/\log_b a\)</b>
+                        </p>
+                        <p>
+                           <b>\(a^{\log_a b} = b\)</b>
+                        </p>
+                        <p>
+                           daca <b>\(a > 1\)</b> functia \(\log\) este crescatoare , <b>\(\log_a b > \log_a c => b > c\)</b>
+                        </p>
+                        <p>
+                           daca <b>\(a < 1\)</b> functia \(\log\) este crescatoare , <b>\(\log_a b > \log_a c => b < c\)</b>
+                        </p>
+                        <a class="btn btn-default" style="float: right;" href="S1/\logaritmi/Tool-uri.html">Tool-uri</a>
+                        <a class="btn btn-default" style="float: left;" href="S1/\logaritmi/ExercitiiRezolvate.html">Exercitii rezolvate</a>
+                     </div>
+                              </div>
+                           </div>
+                           <div class="panel panel-default">
+                              <!-- Legi de compozitie --> 
+                              <div class="panel-heading text-center">
+                                 <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#Algebra" href="#collapse18">Legi de compozitie</a>
+                                 </h4>
+                              </div>
+                              <div id="collapse18" class="panel-collapse collapse">
+                                 <div class="panel-body">
+                                    
+									<p>Fie M o multime nevida pe care s-a dat o lege de compozitie notata *.<br>
+									Legea * este <b>asociativa</b> daca <b>\((x * y) * z = x * (y * z)\)</b> \(&#x2200;x , y , z &#x2208; M\)<br>
+									Legea * este <b>comutativa</b> daca <b>\(x * y = y * x\)</b> \(&#x2200;x , y &#x2208; M\)<br>
+									Legea * are <b>element neutru e</b>daca <b>\(x * e = e * x = x\)</b> \(&#x2200;x &#x2208; M\)<br>
+									Un element \(x &#x2208; M\) se numeste <b>simetrizabil</b> daca \(&#x2203; x' &#x2208; M\) astfel incat <b>\(x * x' = x' * x = e\)</b></p>
+									
+                                    <a class="btn btn-default" style="float: right;" href="S1/FunctiaDeGradul2/Tool-uri.html">Tool-uri</a>
+                                    <a class="btn btn-default" style="float: left;" href="S1/FunctiaDeGradul2/ExercitiiRezolvate.html">Exercitii rezolvate</a>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="panel panel-default">
+                              <!-- Relatiile lui Viete pentru ecuatia de gradul 4 --> 
+                              <div class="panel-heading text-center">
+                                 <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#Algebra" href="#collapse110">Relatiile lui Viete pentru ecuatia de gradul n</a>
+                                 </h4>
+                              </div>
+                              <div id="collapse110" class="panel-collapse collapse">
+                                 <div class="panel-body">
+                                    
+									<p>Daca <b>\(a_nx^{n} + a_{n - 1}x^{n - 1} + ... + a_1x + a_0 = 0\)</b> are radacinile <b>\(x_{1} ,x_{2} ,x_{3} , ... , x_n\)</b> atunci avem:<br>
+									<b>\(\begin{cases}
+									S_1 = x_{1} + x_{2} + ... + x_{n} = \cfrac{-a_{n - 1}}{a_n} \\
+									S_2 = x_{1} \cdot x_{2} + x_{1} \cdot x_{3} + ... + x_{n-1} \cdot x_{n} = \cfrac{a_{n - 2}}{a_n} \\
+									S_3 = x_{1} \cdot x_{2} \cdot x_{3} + ... + x_{n - 2} \cdot x_{n - 1} \cdot x_{n} = \cfrac{-a_{n - 1}}{a_n} \\
+									...\\
+									S_n = x_1x_2x_3...x_n= (-1)^n\cfrac{a_0}{a}
+									\end{cases}\)</b></p>
+									
+									
+                                    <a class="btn btn-default" style="float: right;" href="S1/FunctiaDeGradul2/Tool-uri.html">Tool-uri</a>
+                                    <a class="btn btn-default" style="float: left;" href="S1/FunctiaDeGradul2/ExercitiiRezolvate.html">Exercitii rezolvate</a>
+                                 </div>
+                              </div>
+                           </div>
+						   <div class="panel panel-default">
+					<!-- Conditii de existenta -->
+					<div class="panel-heading text-center">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#Algebra" href="#collapse111">Conditii de existenta</a>
+                     </h4>
+                  </div>
+                  <div id="collapse111" class="panel-collapse collapse">
+                     <div class="panel-body">
+                        <p><b>\(\sqrt{E(x)} , E(x) >= 0\)</b></p>
+                        <p>\(\sqrt[3]{E(x)}\) exista oricare ar fi <b>x</b> real deci nu se pun conditii de existenta </p>
+                        <p><b>\(\log_a^E(x) , E(x) > 0 , a > 0 , a \not = 1\)</b></p>
+                        <p>daca avem numitor , avem conditia numitor diferit de 0. </p>
+                        <p><b>\(\arcsin {E(x)} -1 <= E(x) <= 1\)</b></p>
+                        <p><b>\(\arccos {E(x)} -1 <= E(x) <= 1\)</b></p>
+                        <p><b>\(tg {E(x)} ,	E(x) \not = \cfrac{\pi}{2} + 2k\pi\)</b></p>
+                        <p>domeniul maxim de definitie se obtine din conditiile de existenta
+                           ale expresiei care da functia. 
+                        </p>
+                        <a class="btn btn-default" style="float: right;" href="S1/ConditiiDeExistenta/Tool-uri.html">Tool-uri</a>
+                        <a class="btn btn-default" style="float: left;" href="S1/ConditiiDeExistenta/ExercitiiRezolvate.html">Exercitii rezolvate</a>
+                     </div>
+                  </div>
+               </div>
+			   
+			   <div class="panel panel-default">
+                              <!-- Permutari -->
+                              <div class="panel-heading text-center">
+                                 <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#Algebra" href="#collapse112">Permutari</a>
+                                 </h4>
+                              </div>
+                              <div id="collapse112" class="panel-collapse collapse">
+                                 <div class="panel-body">
+                                    <h2>Definitia 1</h2>
+									<p>Fie n un numar natural nenul.</p>
+									<p>O functie bijectiva \(T. \{1 , 2 , ... , n\} \rightarrow \{1 , 2 , ... , n\}\) se numeste permutare de grad \(n\).</p>
+									<p>Multimea permuarilor de grad n contine \(n!\) elemente si se noteaza \(S_n\).</p>
+									<h2>Inmultirea permutarilor</h2>
+									<p>Fie T si R doua permutari de grad n. Permutarea T \(\circ\) R, unde "\(\circ\)" este operatia de compunere a functiilor , se numeste produsul permutarilor T si R si se noteaza TR.</p>
+									<h2>Proprietati</h2>
+									<p>1. Inmultirea proprietatilor este asociativa.</p>
+									<p>2. Permutarea \(e = \begin{pmatrix} 1 & 2 & ... & n \\ 1 & 2 & ... & n \end{pmatrix}\) are proprietatea \(Te = eT = T\), pentru orice \(T \in S_n\) , si se numeste permutare identica.</p>
+									<p>3.Daca \(T \in S_n\) atunci permutarea \(\begin{pmatrix} T(1) & T(2) & ... & T(n) \\ 1 & 2 & ... & n \end{pmatrix} \in S_n\) se noteaza \(T^{-1}\), se numeste inversa permutarii \(T\) si are proprietatea \(TT^{-1} = T^{-1}T = e\)</p>
+									<h2>Inversiuni, semnul unei permutari</h2>
+									<p>Se numeste inversiune a permutarii \(T \in S_n\) o pereche ordonata \((i , j) \in \{1 , 2 , ... , n\} \times \{1 , 2 , ... , n\} \) , cu \(i < j\) si \(T(i) > T(j)\)</p>
+									<p>Numarul inversiunilor unei permutari \(T\) se noteaza \(m(T)\), iar numarul \((-1)^{m(T)}\) se noteaza \(\varepsilon (T)\) si se numeste semnul permutarii \(T\).Daca \(varepsilon (T) = 1\) (deci \(m(T) este par\)) , atunci \(T\) se numeste permutare para , iar daca \(\varepsilon (T) = -1\) , se numeste permutare impara. </p>
+									<h2>Proprietati</h2>
+									<p>4.\(\varepsilon (TR) = \varepsilon (T) \cdot \varepsilon (R)\) , oricare ar fi \(T , R \in S_n\)</p>
+									<p>\(\varepsilon (e) = 1\)</p>
+									<p>\(\varepsilon (T^{-1}) = \varepsilon (T)\) , oricare r fi \(T \in S_n\)</p>
+									<h2>Definitia 3</h2>
+									<p>Fie \(i , j \in \{1 , 2 , 3 , ... , n \} \) cu \(i \not = j\). Permutarea \(T \in S_n\) cu proprietatile \(T(i) = j , T(j) = i\) si \(T(k) = k\) , pentru orice \(k \in \{1 , 2 , 3 , .. , n\} - \{i , j\}\) se numeste transpozitie si se noteaza \((ij)\)</p>
+									<h2>Proprietati</h2>
+									<p>7. \((ij) = (ji)\)</p>
+									<p>8.\((ij)^{-1} = (ij)\)</p>
+									<p>9. \((ij)^2 = e\)</p>
+									<p>10. Orice transpozitie este o permutare impara</p>
+                                    <a class="btn btn-default" style="float: right;" href="S1/EcuatiaDeGradul2/Tool-uri.html">Tool-uri</a>
+                                    <a class="btn btn-default" style="float: left;" href="S1/EcuatiaDeGradul2/ExercitiiRezolvate.html">Exercitii rezolvate</a>
+                                 </div>
+                              </div>
+                           </div>
+						   
+					<div class="panel panel-default">
+                              <!-- Matrice -->
+                              <div class="panel-heading text-center">
+                                 <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#Algebra" href="#collapse113">Matrice</a>
+                                 </h4>
+                              </div>
+                              <div id="collapse113" class="panel-collapse collapse">
+                                 <div class="panel-body">
+								 
+									<p>In cele ce urmeaza , \(S\) reprezinta una dintre multimile \(Z , Q , R\) sau \(C\), iar \(m\) si \(n\) sunt doua numere naturale nenule.</p>
+									<h2>Definitia 1</h2>
+									<p>O functie \(A : \{1 , 2 , ... , m\} \times \{1 , 2 , ... , n\} \Rightarrow S\) se numeste matrice cu \(m\) linii si \(n\) coloane (sau de tip (\(m\) , \(n\))) , cu elemente din multimea \(S\)</p>
+									<p>Imaginile unei astfel de functii se aseaza intr-un tablou (tablou de tip matriceal) cu m linii si n coloane, in care elementul de pe linia i si coloana j reprezinta imaginea perechii \((i , j)\) prin functia \(A\), element care se noteaza \(a_{ij} \in S\).</p>
+									<h2>Operatii cu matrice</h2>
+									<p>1. <b>Adunarea matricelor:</b> Fie \(A , B \in M_{m , n}(S) , A = (a_{ij}) , B=(b_{ij})\). Matricea \((a_{ij} + b_{ij}) \in M_{m , n}(S)\) se numeste suma matricelor \(A\) si \(B\) si se noteaza \(A + B\)</p>
+									<p>2. <b>Inmultirea cu scalari:</b> Fie \(A = (a_{ij}) \in M_{m , n}(S)\) si \(x \in S\). Matricea \((xa_{ij}) \in M_{m , n}(S)\) se numeste produsul matricei \(\) cu scalarul \(x\) si se noteza \(xA\)</p>
+									<p>3. <b>Inmultirea matricelor:</b> Fie \(A = (a_{ij}) \in M_{m , n}(S)\) si \(B = (b_{jk}) \in M_{m , p}(S)\). Matricea \((c_{ik}) \in M_{m , p}(S)\), unde \(c_{ik} = a_{i1}b_{1k} + a_{i2}b_{2k} + ... + a_{in}b_{nk}\) pentru orice \(i \in \{1 , 2 , ... , m\}\) si \(k \in \{1 , 2, ... , p\}\), se numeste produsul matricei A cu matricea B si se noteaza AB. </p>
+									<h2>Proprietati</h2>
+									<p>Daca operatiile de mai jos au sens , atunci: </p>
+									<p>1. \((AB)C = A(BC)\) deci inmultirea matricelor, acolo unde are sens, este asociativa.</p>
+									<p>2. \(A(B + C) = AB + AC\) si \((B + C)A = BA + CA\) , deci inmultirea matricelor este distributiva fata de adunarea matricelor.</p>
+									<p>3. Inmultirea matricelor este operatie algebrica pe multimea \(M_n(S)\), adica produsul \(AB\) are sens pentru orice \(A , B \in M_n(S)\) si , in acest caz, \(A , B \in M_n(S)\)</p>
+									<p>4. Matricea \(I_n = \begin{pmatrix} 1 & 0 & ... & 0 \\ 0 & 1 & ... & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & ... & 1 \\ \end{pmatrix} \in M_n(S)\) are proprietatea \(AI_n = I_nA = A\), oricare ar fi \(A \in M_N(S)\) , si se numeste matricea unitate.</p>
+									<p><b>Transpusa unei matrice:</b> Transpusa matricei \(A = (a_{ij}) \in M_{m,n}(S)\) este matricea \(A^t = (b_{ij}) \in M_{n , m}(S)\) , unde \(b_{ji} = a_{ij}\) pentru orice \(i \in \{1 , ... , m\}\) si \(j \in \{1 , ... , n\}\)</p>
+									<p><b>Teorema Hamilton-Cayley : </b> Fie \(A = \begin{pmatrix} a & b \\ c & d \\ \end{pmatrix} \in M_2(S)\). Atunci \(A^2 - (a + d)A + (ad - bc)I_2 = O_2\) , unde \(O_2 = \begin{pmatrix} 0 & 0 \\ 0 & 0 \\ \end{pmatrix}\)</p>
+								 
+                                    <a class="btn btn-default" style="float: right;" href="S1/EcuatiaDeGradul2/Tool-uri.html">Tool-uri</a>
+                                    <a class="btn btn-default" style="float: left;" href="S1/EcuatiaDeGradul2/ExercitiiRezolvate.html">Exercitii rezolvate</a>
+                                 </div>
+                              </div>
+                           </div>
+						   
+						   <div class="panel panel-default">
+                              <!-- Determinanti -->
+                              <div class="panel-heading text-center">
+                                 <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#Algebra" href="#collapse114">Determinanti</a>
+                                 </h4>
+                              </div>
+                              <div id="collapse114" class="panel-collapse collapse">
+                                 <div class="panel-body">
+								 
+									<h2>Definitia 1.</h2>
+									<p>Fie \(A = (a_{ij}) \in M_n(S)\). Numarul \( \underset{T \in S_n}{\sum} \varepsilon (T)a_{1T(1)}a_{2T(2)}...a_{nT(n)} \) se numeste determinantul matricei \(A\) si se noteaza cu \(det(A)\) sau : $$\begin{vmatrix}a_{11} & a_{12} & ... & a_{1n} \\ a_{21} & a_{22} & ... & a{2n} \\ ... & ... & ... & ... \\ a_{n1} & a_{n2} & ... & a_{nn} \\ \end{vmatrix}$$</p>
+									<p>Un determinant de ordin \(n\) este determinntul unei matrice patratice de ordin \(n\)</p>
+									<p><b>Determinanti de ordin doi : </b> \(\begin{vmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \\ \end{vmatrix} = a_{11}a_{22} - a_{12}a_{21}\). </p>
+									<p><b>Determinanti de ordin trei : </b> \(\begin{vmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_{31} & a_{32} & a_{33} \\ \end{vmatrix} = a_{11}a_{22}a_{33} + a_{12}a_{23}a_{31} + a_{13}a_{21}a_{32} - a_{13}a_{22}a_{31} - a_{12}a_{21}a_{33} - a_{11}a_{23}a_{32}\)</p>
+									<h2>Proprietati</h2>
+									<p>Fie \(A \in M_n(S)\). Atunci:</p>
+									<p>1. \(det(A) = det(A^t)\). Datorita acestei propozitii , orice proprietate a unui determinant referitore la linii este adevarata si pentru coloane.</p>
+									<p>2. Daca \(A\) are o linie cu toate elementele egale cu 0, atunci \(det(A) = 0\)</p>
+									<p>3. Daca matricea \(B\) se obtiune din \(A\) prin schimbarea locului a doua linii , atunci \(det(B) = -det(A)\).</p>
+									<p>4. Daca \(A\) are doua linii egale, atunci \(det(A) = 0\)</p>
+									<p>5. Daca \(B\) se obtine din \(A\) prin inmultirea elementelor unei linii cu un numar \(\alpha \in S\), atunci \(det(B) = det(A)\).</p>
+									<p>6. Daca \(B\) se obtine din \(A\) prin dunarea liniei \(i\) cu linia \(j\) inmultita cu un numar \(\alpha \in S\) , atunci \(det(B) = det(A)\).</p>
+									<p>7. \(\Delta_{ij}\) (minorul \((ij)\)) este determinantul matricei obtinuta din \(A\) prin suprimarea liniei \(i\) si coloanei \(j\). Numarul \(\omega_{ij} = (-1)^{i + j} \cdot \Delta_{ij}\) se numeste complementul algebric al elementului \(a_{ij}\) din matricea \(A\). Atunci \(det(A) = a_{i1}\omega_{i1} + a_{i2}\omega_{i2} + .. + a_{in}\omega_{in}\) (Dezvoltarea dupa linia i a determinantului de ordin n)</p>
+									<p></p>
+								 
+                                    <a class="btn btn-default" style="float: right;" href="S1/EcuatiaDeGradul2/Tool-uri.html">Tool-uri</a>
+                                    <a class="btn btn-default" style="float: left;" href="S1/EcuatiaDeGradul2/ExercitiiRezolvate.html">Exercitii rezolvate</a>
+                                 </div>
+                              </div>
+                           </div>
+						   
+                        </div>
+                     </div>
+                  </div>
+               </div>
+			   
+               <div class="panel panel-default">
+                  <!-- Analiza matematica-->
+                  <div class="panel-heading text-center">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#Subiectul2" href="#collapse2">Analiza matematica</a>
+                     </h4>
+                  </div>
+                  <div id="collapse2" class="panel-collapse collapse">
+                     <div class="panel-body">
+                        <div class="panel-group" id="Analiza">
+						  <div class="panel panel-default">
+							  <!-- Asimptote -->
+							  <div class="panel-heading text-center">
+								 <h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#Analiza" href="#collapse21">Asimptote</a>
+								 </h4>
+							  </div>
+							  <div id="collapse21" class="panel-collapse collapse">
+								 <div class="panel-body">
+									
+									<h3>Asimptote orizontale</h3>
+									<p>Pentru a studia existenţa asimptotei orizontale spre <b>\(+&#x221E;\)</b> la graficul unei funcţii se calculează <b>\(\lim_{x->+&#x221E;} f(x)\).</b></p>
+									<p><b>Cazul 1.</b> Daca aceasta limita nu exista sau este infinita atunci graficul nu are asimptota orizontala spre <b>\(+&#x221E;\)</b><br>
+									<b>Cazul 2.</b> Daca aceasta limita exista si este finita, egala cu un numar real \(l\) , atunci graficul are asimptota orizontala spre <b>\(+&#x221E;\)</b> dreapta de ecuatie \(y = l\)<br>
+									Analog se studiaza existenta asimptotei orizontale spre <b>\(-&#x221E;\)</b></p>
+									
+									<h3>Asimptote oblice</h3>
+									<p>Asimptota oblica spre <b>\(+&#x221E;\)</b> (daca exista) are ecuatia <b>\(y = mx + n\)</b> unde m si n se calculeaza cu formulele: <br>
+									<b>\(m = lim_{x->+&#x221E;}\cfrac{f(x)}{x}\)<br>
+									\(n = lim_{x->+&#x221E;}[f(x) - m \cdot x]\)</b><br>
+									Analog se studiaza existenta asimptotei oblice spre <b>\(-&#x221E;\)</b></p>
+									
+									<h3>Asimptote verticale</h3>
+									<p>
+									  Se calculeaza <b>\(lim_{\begin{cases}x->x_0 \\ x&lt;x_0\end{cases}}f(x)\)</b> si <b>\(lim_{\begin{cases}x->x_0 \\ x>x_0\end{cases}}f(x)\)</b><br>
+									  Daca una dintre aceste limite este infinita atunci graficul are asimptota verticala dreapta de ecuatie <b>\(x = x_{0}\)</b>
+									</p>
+									
+									<a class="btn btn-default" style="float: right;" href="S1/FunctiaDeGradul2/Tool-uri.html">Tool-uri</a>
+									<a class="btn btn-default" style="float: left;" href="S1/FunctiaDeGradul2/ExercitiiRezolvate.html">Exercitii rezolvate</a>
+								 </div>
+							  </div>
+						   </div>
+						
+							<div class="panel panel-default">
+							  <!-- Derivate -->
+							  <div class="panel-heading text-center">
+								 <h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#Analiza" href="#collapse22">Derivate</a>
+								 </h4>
+							  </div>
+							  <div id="collapse22" class="panel-collapse collapse">
+								 <div class="panel-body">
+									
+									<p>Derivata unei functii intr-un punct: <b>\(f'(x_{0}) = \cfrac{lim_{x->x_0}(f(x) - f(x_{0}))}{x - x_{0}}\)</b></p>
+									<p>Tangenta la graficul unei functii in punctul de abscisa <b>\(x_{0}\)</b>:<br>
+									<b>\(y - f(x_{0}) = f'(x_{0})(x - x_{0})\)</b></p>
+									
+									<h3>Reguli de derivare</h3>
+									<p><b>\((f + g)' = f' + g'\)<br><br>
+									\((f - g)' = f' - g'\)<br><br>
+									\((c \cdot f)' = c \cdot f'\)<br><br>
+									\((f \cdot g)' = f' \cdot g + f \cdot g'\)<br><br>
+									\((f/g)' = (f' \cdot g - f \cdot g')/g^{2}\)</b>
+									</p>
+									
+									<h3>Derivatele unor functii uzuale</h3>
+									
+									<b><table class="table">
+									
+										<style>tr{font-size: 20px;}</style>
+									
+										<tr>
+										  <td>\(c' = 0\)</td>
+										  <td>\((lnx)' = \cfrac{1}x\)</td>
+										</tr>
+										
+										<tr>
+										  <td>\(x' = 1\)</td>
+										  <td>\((log_{a}x)' = \cfrac{1}x \cdot lna\)</td>
+										</tr>
+										
+										<tr>
+										  <td>\((x^{n})' = nx^{n-1}\)</td>
+										  <td>\((\sin x)' = \cos x\)</td>
+										</tr>
+										
+										<tr>
+										  <td>\((\cfrac{1}x)' = 	\cfrac{-1}{x^{2}}\)</td>
+										  <td>\((\cos x)' = -\sin x\)</td>
+										</tr>
+										
+										<tr>
+										  <td>\((\sqrt{x})' = \cfrac{1}{2\sqrt{x}}\)</td>
+										  <td>\((tg x)' = \cfrac{1}{\cos^{2}x}\)</td>
+										</tr>
+										
+										<tr>
+										  <td>\((e^{x})' = e^{x}\)</td>
+										  <td>\((ctgx)' = \cfrac{-1}{\sin^{2}x}\)</td>
+										</tr>
+										
+										<tr>
+										  <td>\((e^{-x})' = -e^{-x}\)</td>
+										  <td>\((arcsin x)' = \cfrac{1}{\sqrt{1 - x^{2}}}\)</td>
+										</tr>
+										
+										<tr>
+										  <td>\(a^{x} = a^{x} \cdot lna\)</td>
+										  <td>\((arccos x)' = \cfrac{-1}{\sqrt{1 - x^{2}}}\)</td>
+										</tr>
+										
+										<tr>
+										  <td>\((arctg x)' = \cfrac{1}{1 + x^{2}}\)</td>
+										  <td>\((arcctg x)' = \cfrac{-1}{1 + x^{2}}\)</td>
+										</tr>
+									
+									</table></b>
+									
+									<h3>Derivatele unor functii compuse</h3>
+									
+									<b><table class="table">
+									
+									  <tr>
+									    <td>\((u^{n})' = n \cdot u^{n-1} \cdot u'\)</td>
+									    <td>\((ln u)' = \cfrac{u'}{u}\)</td>
+									  </tr>
+									  
+									  <tr>
+									    <td>\((\cfrac{1}{u})' = \cfrac{-u^{2}}{u}\)</td>
+									    <td>\((log_{a}u)' = \cfrac{u'}{u} \cdot lna\)</td>
+									  </tr>
+									  
+									  <tr>
+									    <td>\((\sqrt{u})' = \cfrac{u'}{2\sqrt{u}}\)</td>
+									    <td>\((\sin u)' = \cos u \cdot u'\)</td>
+									  </tr>
+									  
+									  <tr>
+									    <td>\((e^{u})' = e^{u} \cdot u'\)</td>
+									    <td>\((\cos u)' = -\sin u \cdot u'\)</td>
+									  </tr>
+									  
+									  <tr>
+									    <td>\((e^{-u})' = -e^{-u} \cdot u'\)</td>
+									    <td>\((tg u)' = u'/cons^{2}u\)</td>
+									  </tr>
+									  
+									  <tr>
+									    <td>\((a^{u})' = a^{u} \cdot lna \cdot u'\)</td>
+									    <td>\((ctg u)' = \cfrac{-u'}{\sin^{2}u}\)</td>
+									  </tr>
+									  
+									  <tr>
+									    <td>\((arcsin u)' = \cfrac{u'}{\sqrt{1-u^{2}}}\)</td>
+									    <td>\((arccos u)' = \cfrac{-u'}{\sqrt{1 - u^{2}}}\)</td>
+									  </tr>
+									  
+									  <tr>
+									    <td>\((arctg u)' = \cfrac{u'}{(1 + u^{2})}\)</td>
+									    <td>\((arcctg u)' = \cfrac{-u'}{1 + u^{2}}\)</td>
+									  </tr>
+									
+									</table></b>
+									
+									<a class="btn btn-default" style="float: right;" href="S1/FunctiaDeGradul2/Tool-uri.html">Tool-uri</a>
+									<a class="btn btn-default" style="float: left;" href="S1/FunctiaDeGradul2/ExercitiiRezolvate.html">Exercitii rezolvate</a>
+								 </div>
+							  </div>
+						   </div>
+						   
+						   <div class="panel panel-default">
+							  <!-- Integrale -->
+							  <div class="panel-heading text-center">
+								 <h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#Analiza" href="#collapse23">Integrale</a>
+								 </h4>
+							  </div>
+							  <div id="collapse23" class="panel-collapse collapse">
+								 <div class="panel-body">
+									
+									<h3>Integrale nedefinite</h3>
+									<b><table class="table">
+									
+									  <tr>
+									    <td>\(\int 1 dx = x + C\)</td>
+									    <td>\(\int \sin x dx = -\cos x + C\)</td>
+									  </tr>
+									  
+									  <tr>
+									    <td>\(\int x dx = \cfrac{x^{2}}{2} + C\)</td>
+									    <td>\(\int cox dx = \sin x + C\)</td>
+									  </tr>
+									  
+									  <tr>
+									    <td>\(\int x^{n} dx = \cfrac{x^{n + 1}}{n + 1} + C\)</td>
+									    <td>\(\int \cfrac{1}{\cos^{2}x}dx = tgx + C\)</td>
+									  </tr>
+									  
+									  <tr>
+									    <td>\(\int \cfrac{1}{x} dx = ln|x| + C\)</td>
+									    <td>\(\int \cfrac{1}{\sin^{2}x} dx = -ctgx + C\)</td>
+									  </tr>
+									  
+									  <tr>
+									    <td>\(\int e^{x} dx = e^{x} + C\)</td>
+									    <td>\(\int \cfrac{1}{x^{2} + a^{2}} dx = 1/a \cdot arctg(\cfrac{x}{a}) + C\)</td>
+									  </tr>
+									  
+									  <tr>
+									    <td>\(\int e^{-x} = -e^{-x} + C\)</td>
+									    <td>\(\int \cfrac{1}{x^{2} - a^{2}} dx = \cfrac{1}{2a} \cdot ln|\cfrac{x - a}{x + a}| + C\)</td>
+									  </tr>
+									  
+									  <tr>
+									    <td>\(\int a^{x} dx = \cfrac{a^{x}}{ln a} + C\)</td>
+									    <td>\(\int \cfrac{1}{\sqrt{x^{2} + a^{2}}} dx = ln(x + \sqrt{x^{2} + a^{2}}) + C\)</td>
+									  </tr>
+									  
+									  <tr>
+									    <td>\(\int \cfrac{1}{\sqrt{x^{2} - a^{2}}} dx = ln|x + \sqrt{x^{2} - a^{2}}| + C\)</td>
+									    <td>\(\int \cfrac{1}{\sqrt{a^{2} - x^{2}}} dx = arcsin(\cfrac{x}{a}) + C\)</td>
+									  </tr>
+										
+									</table></b>
+									
+									<b><table class="table">
+									
+									  <tr>
+									    <td>\(\int u'(x) dx = u(x) + C\)</td>
+									    <td>\(\int \sin u(x) \cdot u'(x) dx = -\cos u(x) + C\)</td>
+									  </tr>
+									  
+									  <tr>
+									    <td>\(\int u^{n}(x) \cdot u'(x) dx = \cfrac{u^{n + 1}(x)}{n + 1} + C\)</td>
+									    <td>\(\int \cos u(x) \cdot u'(x) dx = \sin u(x) + C\)</td>
+									  </tr>
+									  
+									  <tr>
+									    <td>\(\int \cfrac{u'(x)}{u(x)} dx = ln|u(x)| + C\)</td>
+									    <td>\(\int \cfrac{u'(x)}{\cos^{2}u(x)} dx = tg u(x) + C\)</td>
+									  </tr>
+									  
+									  <tr>
+									    <td>\(\int e^{u(x)}u'(x) dx = e^{u(x)} + C\)</td>
+									    <td>\(\int \cfrac{u'(x)}{\sin^{2}u(x)} dx = -ctgu(x) + C\)</td>
+									  </tr>
+									  
+									  <tr>
+									    <td>\(\int e^{-u(x)}u'(x) dx = -e^{-u(x)} + C\)</td>
+									    <td>\(\int \cfrac{u'(x)}{u^{2}(x) + a^{2}} dx = \cfrac{1}{a} \cdot arctg(\cfrac{u(x)}{a}) + C\)</td>
+									  </tr>
+									  
+									  <tr>
+									    <td>\(\int a^{u(x)}u'(x) dx = \cfrac{a^{u(x)}}{lna} + C\)</td>
+									    <td>\(\int \cfrac{u'(x)}{u^{2} - a^{2}} dx = \cfrac{1}{2a} \cdot ln|\cfrac{u(x) - a}{u(x) + a}| + C\)</td>
+									  </tr>
+									  
+									  <tr>
+									    <td>\(\int \cfrac{u'(x)}{\sqrt{u^{2} + a^{2}}} dx = ln(u(x) + \sqrt{u^{2}(x) + a^{2}} + C\)</td>
+									    <td>\(\int \cfrac{u'(x)}{\sqrt{u^{2} - a^{2}}} dx = ln|u(x) + \sqrt{u^{2}(x) - a^{2}}| + C\)</td>
+									  </tr>
+									  
+									  <tr>
+									    <td>\(\int \cfrac{u'(x)}{\sqrt{a^{2} - u^{2}(x)}} dx = arcsin(\cfrac{u(x)}{a}) + C\)</td>
+									  </tr>
+									
+									</table></b>
+									
+									<p>Formula de integrare prin parti pentru integrale nedefinite este: <br>
+									<b>$$\int f(x)g'(x)dx = f(x)g(x) - \int f'(x)g(x)$$</b></p>
+									
+									<p>Formula de integrare prin parti pentru integrale nedefinite este: <br>
+									<b>$$\int_{a}^{b}f(x)g'(x)dx = f(x)g(x)|_{a}^{b} - \int_{a}^{b}f'(x)g(x)$$</b></p>
+									
+									<a class="btn btn-default" style="float: right;" href="S1/FunctiaDeGradul2/Tool-uri.html">Tool-uri</a>
+									<a class="btn btn-default" style="float: left;" href="S1/FunctiaDeGradul2/ExercitiiRezolvate.html">Exercitii rezolvate</a>
+								 </div>
+							  </div>
+						   </div>
+						</div>
+					</div>
+                  </div>
+               </div>
+			   
+               <div class="panel panel-default">
+                  <!-- Geometrie -->
+                  <div class="panel-heading text-center">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#Subiectul2" href="#collapse25">Geometrie</a>
+                     </h4>
+                  </div>
+                  <div id="collapse25" class="panel-collapse collapse">
+                     <div class="panel-body">
+                        
+						<h3>Teorema lui Pitagora</h3>
+						<p>Intr-un triunghi dreptunghic are loc relatia:<br>
+						\(cateta^{2} + cateta^{2} = ipotenuza^{2}\)</p>
+						<h3>Teorema lui Pitagora generalizata(teorema cosinusului)</h3>
+						<p>Intr-un triunghi oarecare ABC are loc relatia:<br>
+						\(BC^{2} = AB^{2} + AC^{2} - 2 \cdot AB \cdot AC \cdot \cos A\)</p>
+						<h3>Aria unui triunghi echilateral de latura l este:<br></h3>
+						<p>\(Aria = l^{2}\sqrt{\cfrac{3}{4}}\)</p>
+						<h3>Aria unui triunghi oarecare</h3>
+						<p>\(Aria = \cfrac{AB \cdot AC \cdot \sin A}{2}\)</p>
+						<h3>Formula lui Heron</h3>
+						<p>\(S = \sqrt{p(p-a)(p-b)(p-c)} , p = \cfrac{a + b + c}{2}\)</p>
+						<h3>Aria triunghiului dreptunghic</h3>
+						<p>\(Aria = \cfrac{cateta1 \cdot cateta2}{2}\)</p>
+						<h3>Teoria sinusurilor</h3>
+						<p>Intr-un triunghi oarecare ABC are loc relatia:<br>
+						\(\cfrac{a}{\sin A} = \cfrac{b}{\sin B} = \cfrac{c}{\sin C}\)<br>
+						unde \(a , b , c\) sunt laturile triunghiului<br>
+						\(A , B , C\) sunt unghiurile triunghiului<br>
+						\(R\) este raza cercului circumscris triunghiului</p>
+						<h3>Distanta dintre doua puncte</h3>
+						<p>\(Daca A(x_{1} , y_{1})\) si \(B(x_{2} , y_{2})\) sunt doua puncte in plan atunci mijlocul segmentului \(AB\) este<br>
+						\(M((x_{1} + x_{2})/2 , (y_{1} + y_{2})/2)\)</p>
+						<h3>Vectorul de pozitie al unui punct</h3>
+						<p>Daca \(A(x , y)\) atunci \(\overrightarrow{OA} = x \cdot \overrightarrow i + y \cdot \overrightarrow j\)<br>
+						Daca \(A(x_{1} , y_{1})\) si \(B(x_{2} , y_{2})\) sunt doua puncte in plan atunci vector \(\overrightarrow{AB}\) este dat de formula:<br>
+						\(\overrightarrow{AB} = (x_{2} - x_{1})\overrightarrow i + (y_{2} - y_{1})\overrightarrow j\)</p>
+						<h3>Ecuatia unei drepte care trece prin doua puncte date</h3>
+						<p>\(Daca A(x_{1} , y_{1}) si B(x_{2} , y_{2})\) sunt doua puncte in plan atunci ecuatia dreptei \(AB\) se poate afla cu formula:<br>
+						\(\cfrac{x - x_{1}}{x_{2} - x_{1}} = \cfrac{y - y_{1}}{y_{2} - y_{1}}\) sau cu formula:<br>
+						$$\begin{vmatrix}x & y & 1 \\ x_{1} & y_{1} & 1 \\ x_{2} & y_{2} & 1\end{vmatrix} = 0$$</p>
+						<h3>Ecuatia unei drepte care trece prin punctul \(A(x_{0} , y_{0})\) si are panta data \(m\)</h3>
+						<p>Este data de formula \(y - y_{0} = m(x - x_{0})\)</p>
+						<h3>Conditia de coliniaritate a trei puncte in plan</h3>
+						<p>Fie \(A(x_{1} , y_{1}) , B(x_{2} , y_{2}) , C(x_{3} , y_{3})\) trei puncte in plan.<br>
+						Punctele \(A , B , C\) sunt coliniare daca si numai daca <br>
+						$$\begin{vmatrix}x_{1} & y_{1} & 1 \\ x_{2} & y_{2} & 1 \\ x_{3} & y_{3} & 1\end{vmatrix} = 0$$</p>
+						</p>
+						<h3>Aria unui triunghi</h3>
+						<p>Fie \(A(x_{1} , y_{1}) , B(x_{2} , y_{2}) , C(x_{3} , y_{3})\) trei puncte in plan.<br>
+						Aria triunghiului ABC este data de formula<br>
+						\(A_{△ABC} = \cfrac{1}{x} \cdot |Δ|\)<br>
+						unde \(Δ\) este urmatorul determinant:<br>
+						$$\begin{vmatrix}x_{1} & y_{1} & 1 \\ x_{2} & y_{2} & 1 \\ x_{3} & y_{3} & 1\end{vmatrix}$$
+						</p>
+						<h3>Distanta de la un punct la o dreapta</h3>
+						<p>Daca \(A(x_{0} , y_{0})\) este un punct si \(d: ax + by + x = 0\) este o dreapta in plan atunci distanta de la punctul \(A\) la dreapta \(d\) este data de formula:<br>
+						\(dist(A , d) = \cfrac{|ax_{0} + by_{0} + c|}{\sqrt{{a^{2} + b^{2}}}}\)</p>
+						<h3>Panta unei drepte</h3>
+						<p>Daca \(A(x_{1} , y_{1})\) si \(B(x_{2} , y_{2})\) sunt doua puncte in plan atunci panta dreptei \(AB\) este data de formula:<br>
+						$$m = \cfrac{y_{2} - y_{1}}{x_{2} - x_{1}}$$</p>
+						<h3>Conditia de coliniaritate a doi vectori in plan</h3>
+						<p>Fie \(\overrightarrow v = a_{1}\overrightarrow i + b_{1}\overrightarrow j\) si \(v_{2} = a_{2}\overrightarrow i + b_{2}\overrightarrow j\) doi vectori in plan. Conditia de coliniaritate a vectorilor \(\overrightarrow v_{1} , \overrightarrow v_{2}\) este: <br>
+						$$\cfrac{a_{1}}{a_{2}} = \cfrac{b_{1}}{b_{2}}$$</p>
+						<h3>Conditia de perpendicularitate a doi vectori in plan</h3>
+						<p>Fie \(\overrightarrow v = a_{1}\overrightarrow i + b_{1}\overrightarrow j\) si \(v_{2} = a_{2}\overrightarrow i + b_{2}\overrightarrow j\) doi vectori in plan. Avem:<br>
+						$$\overrightarrow v_{1} &#x22A5; \overrightarrow v_{2} &#x3c;=> a_{1} \cdot a_{2} + b_{1} \cdot b_{2} = 0$$ (produsul scalar este 0)</p>
+						<h3>Conditia de paralelism a doua drepte in plan</h3>
+						<p>Doua \(d_{1}\) si \(d_{2}\) sunt paralele daca si numai daca au aceeasi panta adica:<br>
+						\(d_{1} || d_{2} &#x3c;=> m_{d_{1}} = m_{d_{2}}\)<br>
+						Altfel, daca dreptele sunt date prin ecuatia generala: \(d_{1}: a_{1}x + b_{1}y + c_{1} = 0 si d_{2}: a_{2}x + b_{2}y + c = 0\)<br>
+						atunci dreptele sunt paralele daca \(\cfrac{a_{1}}{a_{2}} = \cfrac{b_{1}}{b_{2}}\)</p>
+						<h3>Conditia de perpendicularitate a doua drepte in plan</h3>
+						<p>Doua drepte \(d_{1}\) si \(d_{2}\) sunt perpendiculare daca si numai daca produsul pantelor este egal cu -1 adica:<br>
+						\(d_{1} &#x22A5; d_{2} &#x3c;=> m_{d_{1}} \cdot m_{d_{1}} = -1\)</p>
+						<p>
+                           Modulul vectorului: <b>\(|\overrightarrow{v}| = \sqrt{a^2 + b^2}\)</b>
+                        </p>
+                        <p>
+                           Produsul scalar a doi vectori <b>\(\overrightarrow v = a · \overrightarrow i + b · \overrightarrow j\)</b> si  <b>\(\overrightarrow w = c · \overrightarrow i + d · \overrightarrow j\)</b> este <b>\(\overrightarrow v + \overrightarrow w = a · c + b · d\)</b>
+                        </p>
+                        <p>
+                           Suma a doi vectori <b>\(\overrightarrow v = a · \overrightarrow i + b · \overrightarrow j\)</b> si  <b>\(\overrightarrow w = c · \overrightarrow i + d · \overrightarrow j\)</b> este <b>\(\overrightarrow v + \overrightarrow w = (a + c)\overrightarrow i + (b + d)\overrightarrow j\)</b>
+                        </p>
+                        <p>
+                           <b>Conditia ca doi vectori sa fie coliniari :</b><br>
+                           Doi vectori <b>\(\overrightarrow v\)</b> si <b>\(\overrightarrow u\)</b> sunt coliniari daca exista a numar real astfel incat <b>\(\overrightarrow v = a · \overrightarrow u\)</b><br>
+                           Daca vectorii sunt dati sub forma <b>\(\overrightarrow{v} = a · \overrightarrow i + b · \overrightarrow j\) si \(\overrightarrow u = c · \overrightarrow i + d · \overrightarrow j\)</b> conditia
+                           de coliniaritate revine la <b>\(\cfrac{a}{c} = \cfrac{b}{d}\)</b>
+                        </p>
+                        <p>
+                           Daca <b>\(A(x_A , y_A)\)</b> si <b>\(B(x_B , y_B)\)</b> atunci <b>\(\overrightarrow{AB} = (x_B - x_A) · \overrightarrow i + (y_B - y_A) · \overrightarrow j\)</b>
+                        </p>
+                        <p>
+                           Daca <b>\(A(x_A , y_A)\)</b> vectorul de pozitie al lui A este <b>\(\overrightarrow{OA} = x_A · \overrightarrow i + y_A · \overrightarrow j\)</b> se mai noteaza <b>\(\overrightarrow r_A\) 	</b>
+                        </p>
+                        <a class="btn btn-default" style="float: right;" href="S1/FunctiaDeGradul2/Tool-uri.html">Tool-uri</a>
+                        <a class="btn btn-default" style="float: left;" href="S1/FunctiaDeGradul2/ExercitiiRezolvate.html">Exercitii rezolvate</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="panel panel-default">
+                  <!-- Trigonometrie -->
+                  <div class="panel-heading text-center">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#Subiectul2" href="#collapse26">Trigonometrie</a>
+                     </h4>
+                  </div>
+                  <div id="collapse26" class="panel-collapse collapse">
+                     <div class="panel-body">
+					 
+						<table class="table table-bordered hidden-xs">
+						<style>tr{font-size: 20px;}</style>
+                           <tr>
+                              <td><b>Unghi(grade)</b></td>
+                              <td><b>$$0°$$</b></td>
+                              <td><b>$$30°$$</b></td>
+                              <td><b>$$45°$$</b></td>
+                              <td><b>$$60°$$</b></td>
+                              <td><b>$$90°$$</b></td>
+                              <td><b>$$120°$$</b></td>
+                              <td><b>$$135°$$</b></td>
+                              <td><b>$$150°$$</b></td>
+                              <td><b>$$180°$$</b></td>
+                           </tr>
+                           <tr>
+                              <td><b>Unghi(radiani)</b></td>
+                              <td><b>$$0$$</b></td>
+                              <td><b>$$\pi/6$$</b></td>
+                              <td><b>$$\pi/4$$</b></td>
+                              <td><b>$$\pi/3$$</b></td>
+                              <td><b>$$\pi/2$$</b></td>
+                              <td><b>$$2\pi/3$$</b></td>
+                              <td><b>$$3\pi/4$$</b></td>
+                              <td><b>$$5\pi/6$$</b></td>
+                              <td><b>$$\pi$$</b></td>
+                           </tr>
+                           <tr>
+                              <td>Sin</td>
+                              <td>$$0$$</td>
+                              <td>$$1/2$$</td>
+                              <td>$$√2/2$$</td>
+                              <td>$$√3/2$$</td>
+                              <td>$$1$$</td>
+                              <td>$$√3/2$$</td>
+                              <td>$$√2/2$$</td>
+                              <td>$$1/2$$</td>
+                              <td>$$0$$</td>
+                           </tr>
+                           <tr>
+                              <td>Cos</td>
+                              <td>$$1$$</td>
+                              <td>$$√3/2$$</td>
+                              <td>$$√2/2$$</td>
+                              <td>$$1/2$$</td>
+                              <td>$$0$$</td>
+                              <td>$$-1/2$$</td>
+                              <td>$$-√2/2$$</td>
+                              <td>$$-√3/2$$</td>
+                              <td>$$-1$$</td>
+                           </tr>
+                           <tr>
+                              <td>Tg</td>
+                              <td>$$0$$</td>
+                              <td>$$1/√3$$</td>
+                              <td>$$1$$</td>
+                              <td>$$√3$$</td>
+                              <td>$$-$$</td>
+                              <td>$$-√3$$</td>
+                              <td>$$-1$$</td>
+                              <td>$$-1/√3$$</td>
+                              <td>$$0$$</td>
+                           </tr>
+                           <tr>
+                              <td>Ctg</td>
+                              <td>$$-$$</td>
+                              <td>$$√3$$</td>
+                              <td>$$1$$</td>
+                              <td>$$1/√3$$</td>
+                              <td>$$0$$</td>
+                              <td>$$-1/√3$$</td>
+                              <td>$$-1$$</td>
+                              <td>$$-√3$$</td>
+                              <td>$$-$$</td>
+                           </tr>
+                        </table>
+                        <table class="table table-bordered hidden-xs">
+                           <tr>
+                              <td><b>Unghi(grade)</b></td>
+                              <td><b>$$210°$$</b></td>
+                              <td><b>$$225°$$</b></td>
+                              <td><b>$$240°$$</b></td>
+                              <td><b>$$270°$$</b></td>
+                              <td><b>$$300°$$</b></td>
+                              <td><b>$$315°$$</b></td>
+                              <td><b>$$330°$$</b></td>
+                              <td><b>$$360°$$</b></td>
+                           </tr>
+                           <tr>
+                              <td><b>Unghi(radiani)</b></td>
+                              <td><b>$$7\pi/6$$</b></td>
+                              <td><b>$$5\pi/4$$</b></td>
+                              <td><b>$$4\pi/3$$</b></td>
+                              <td><b>$$3\pi/2$$</b></td>
+                              <td><b>$$5\pi/3$$</b></td>
+                              <td><b>$$7\pi/4$$</b></td>
+                              <td><b>$$11\pi/6$$</b></td>
+                              <td><b>$$2\pi$$</td>
+                           </tr>
+                           <tr>
+                              <td>Sin</td>
+                              <td>$$-1/2$$</td>
+                              <td>$$-√2/2$$</td>
+                              <td>$$-√3/3$$</td>
+                              <td>$$-1$$</td>
+                              <td>$$-√3/2$$</td>
+                              <td>$$-√2/2$$</td>
+                              <td>$$-1/2$$</td>
+                              <td>$$0$$</td>
+                           </tr>
+                           <tr>
+                              <td>Cos</td>
+                              <td>$$-√3/2$$</td>
+                              <td>$$-√2/2$$</td>
+                              <td>$$-1/2$$</td>
+                              <td>$$0$$</td>
+                              <td>$$1/2$$</td>
+                              <td>$$√2/2$$</td>
+                              <td>$$√3/2$$</td>
+                              <td>$$1$$</td>
+                           </tr>
+                           <tr>
+                              <td>Tg</td>
+                              <td>$$1/√3$$</td>
+                              <td>$$1$$</td>
+                              <td>$$√3$$</td>
+                              <td>$$-$$</td>
+                              <td>$$-√3$$</td>
+                              <td>$$-1$$</td>
+                              <td>$$-1/√3$$</td>
+                              <td>$$0$$</td>
+                           </tr>
+                           <tr>
+                              <td>Ctg</td>
+                              <td>$$√3$$</td>
+                              <td>$$1$$</td>
+                              <td>$$1/√3$$</td>
+                              <td>$$0$$</td>
+                              <td>$$-1/√3$$</td>
+                              <td>$$-1$$</td>
+                              <td>$$-√3$$</td>
+                              <td>$$-$$</td>
+                           </tr>
+                        </table>
+                        <p><b>\(\sin(180° - x) = \sin x\)<br>
+                           \(\sin(90° - x) = \cos x\)<br>
+                           \(\cos(180° - x) = -\cos x\)<br>
+                           \(\cos(90° - x) = \sin x\)<br>
+                           \(\sin^2x + \cos^2x = 1\) , oricare x real <br>
+                           \(tgx = \sin x/\cos x\)<br>
+                           \(ctgx = \cos x/\sin x = \cfrac{1}{tg x}\)</b>
+                        </p>
+					 
+                        <b><table class="table">
+						<tr>
+						<td>\(\sin^{2}x + \cos^{2}x = 1\)<br></td>
+						<td>\(\sin(-x) = -\sin(x)\)<br></td>
+						</tr>
+						<tr>
+						<td>\(\cos(-x) = \cos x\)<br></td>
+						<td>\(\sin(\cfrac{π}{2} - x) = \cos x\)<br></td>
+						</tr>
+						<tr>
+						<td>\(\cos(\cfrac{π}{2} - x) = \sin x\)<br></td>
+						<td>\(tg(-x) = -tg x\)<br></td>
+						</tr>
+						<tr>
+						<td>\(ctg(-x) = -ctg x\)<br></td>
+						<td>\(\sin 2x = 2\sin x\cos x\)<br></td>
+						</tr>
+						<tr>
+						<td>\(\sin x = 2\sin \cfrac{x}{2}\cos \cfrac{x}{2}\)<br></td>
+						<td>\(\cos 2x = \cos^{2}x - \sin^{2}x\)<br></td>
+						</tr>
+						<tr>
+						<td>\(\cos 2x = 2\cos^{2}x - 1\)<br></td>
+						<td>\(\cos^{2}x = \cfrac{1+ 2\cos 2x}{2}\)<br></td>
+						</tr>
+						<tr>
+						<td>\(\cos 2x = 1 - 2\sin^{2}x\)<br></td>
+						<td>\(\sin^{2} = \cfrac{1 - \cos 2x}{2}\)<br></td>
+						</tr>
+						<tr>
+						<td>\(\sin3x = \sin x(3 - 4\sin^{2}x)\)<br></td>
+						<td>\(\cos3x = \cos x(4\cos^{2}x - 3)\)<br></td>
+						</tr>
+						
+						
+						<tr>
+						 <td> \(\sin(a + b) = \sin a\cos b + \sin b\cos a\)<br></td>
+						 <td> \(\sin(a - b) = \sin a\cos b - \sin b\cos a\)<br></td>
+						</tr>
+						<tr>
+						 <td> \(\cos(a + b) = \cos a\cos b - \sin a\sin b\)<br></td>
+						<td>  \(\cos(a - b) = \cos a\cos b + \sin a\sin b\)<br></td>
+						</tr>
+						
+						<tr>
+						 <td>\( tg(a + b) = \cfrac{tg a + tg b}{1 - tg a \cdot tg b}\)<br></td>
+						<td>  \(tg(a - b) = \cfrac{tg a - tg b}{1 + tg a \cdot tg b}\)<br></td>
+						</tr>
+						<tr>
+						<td> \( tgx = \cfrac{\sin x}{\cos x}\)<br></td>
+						<td> \( ctgx = \cfrac{\cos x}{\sin x}\)<br></td>
+						</tr>
+						<tr>
+						  <td>\(tg3x = \cfrac{3tgx - tg^{3}x}{1 - 3tg^{2}x}\)<br></td>
+						  <td>\(ctg3x = \cfrac{ctg^{3}x - 3ctgx}{3ctg^{2}x - 1}\)<br></td>
+						</tr>
+						
+						
+						</table></b>
+						
+						<hr>
+						
+						<p class="text-center">$$t = tg(\cfrac{x}{2})$$</p>
+						
+						<p class="text-center">
+						
+						
+						<b>$$\sin x = \cfrac{2t}{1 + t}$$
+						$$\cos x = \cfrac{1 - t^{2}}{1 + t^{2}}$$
+						$$tg x = \cfrac{2t}{1 - t^{2}}$$
+						$$ctg x = \cfrac{1 - t^{2}}{2t}$$</b>
+						
+						</p>
+						
+						<hr>
+						
+						<p class="text-center">
+						
+						  <b>$$\sin2x = \cfrac{2tg x}{1 + tg^{2}x}$$
+						  $$\cos2x = \cfrac{1 - tg^{2}x}{1 + tg^{2}x}$$
+						  $$tg2x = \cfrac{2tgx}{1 - tg^{2}x}$$
+						  $$ctg2x = \cfrac{1 - tg^{2}x}{2tg x}$$</b>
+						
+						</p>
+						
+						<hr>
+						
+						<h3>Ecuatii trigonometrice fundamentale</h3>
+						<p>
+						  Ecutia <b>\(\sin x = a\)</b> are solutii daca si numai daca \(a &#x2208; [-1 , 1]\)<br>
+						  In acest caz solutiile sunt : <b>\(x &#x2208; {(-1)^{k}arcsin a + kπ / k &#x2208; N}\)</b>
+						</p>
+						<p>
+  						 Ecutia <b>\(\cos x = b\)</b> are solutii daca si numai daca \(b &#x2208; [-1 , 1]\)<br>
+						  In acest caz solutiile sunt : <b>\(x &#x2208; {±arccos b + 2kπ / k &#x2208; N}\)</b>
+						</p>
+						
+						<p>
+						  Ecutia <b>\(tgx = c\)</b> are solutii \(∀ c &#x2208; R\)<br>
+						  In acest caz solutiile sunt : <b>\(x &#x2208; {arctgc + kπ / k &#x2208; N}\)</b>
+						</p>
+						
+						<p>
+						  Ecutia <b>\(ctgx = d\)</b> are solutii \(∀ d &#x2208; R\)<br>
+						  In acest caz solutiile sunt : <b>\(x &#x2208; {arcctgd + kπ / k &#x2208; N}\)</b>
+						</p>
+						  
+						<p>
+						 $$\sin(arcsin x) = x$$
+						$$ \sin(arccos c) = \sqrt{1 - x^{2}}$$
+						 $$ \cos(arccos x) = x$$
+						 $$ \cos(arcsin x) = \sqrt{1 - x^{2}}$$
+						</p>
+						  
+						
+						
+						
+                        <a class="btn btn-default" style="float: right;" href="./S1/Trigonometrie/Tool-uri.html">Tool-uri</a>
+                        <a class="btn btn-default" style="float: left;" href="S1/FunctiaDeGradul2/ExercitiiRezolvate.html">Exercitii rezolvate</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
+
+

@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+
+  <head>
+  
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="index.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="../../../Tools/math.js" type="text/javascript"></script>
+	<script src="../../../Tools/algebra-0.2.6.min.js" type="text/javascript"></script>
+	<script defer src = "../../../Tools/katex/katex.min.js"></script>
+	<script defer src = "../../../Tools/katex/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+	<script defer src="../../../Tools/katex/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+   
+  </head>
+
+  <body>
+	
+	<nav class="navbar navbar-default navbar-fixed-top">
+         <div class="container-fluid">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".baraNavigatie">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>  
+               </button>
+               <li class="navbar-brand Logo" href="#">Bacxvia</li>
+			   <style>.Logo:hover{cursor:default;}</style>
+            </div>
+            <div class="collapse navbar-collapse baraNavigatie">
+               <ul class="nav navbar-nav">
+                  <li><a href="../index.html">Acasa</a></li>
+				  
+               <li class="active">
+				<a href="../../../SubiecteMatematica/Matematica.html">Matematica</a>
+			  </li>
+			  
+			  
+			  <li>
+				<a href="../../../SubiecteRomana/Romana.html">Romana</a>
+			  </li>
+				  
+               </ul>
+            </div>
+         </div>
+      </nav>
+	
+	<div class="container" style="text-align: center;">
+		<div class="input-group">
+			<span class="input-group-addon">a</span>
+			<input type="text" class="form-control panou a" placeholder="Introduceti coeficientul a">
+		</div><br>
+		
+		<div class="input-group">
+			<span class="input-group-addon">b</span>
+			<input type="text" class="form-control panou b" placeholder="Introduceti coeficientul b">
+		</div><br>
+		
+		<div class="input-group">
+			<span class="input-group-addon">c</span>
+			<input type="text" class="form-control panou c" placeholder="Introduceti coeficientul c">
+		</div><br>
+		<center><button class="btn btn-default" onclick="calc()">Calculeaza</button></center>
+		<h2 class="raspuns" id="raspuns"></h2>
+	</div>
+	
+	<script>
+
+		function calc()
+		{
+		var a = $('.a').val();
+		var b = $('.b').val();
+		var c = $('.c').val();
+	
+		var Equation = algebra.Equation;
+		var Expression = algebra.Expression;
+		var Fraction = algebra.Fraction;
+		console.log(algebra.parse(math.simplify(a + "* x^2" +  " + " + b + "* x + " + c).toString()).toString());
+		var quad = new Equation(algebra.parse(math.simplify(a + "* x^2" +  " + " + b + "* x + " + c).toString()), 0);
+		
+		var answers = quad.solveFor("x");
+				
+		if(answers.toString() == "") $('.raspuns').html("\\(x_{1 , 2} = \\)complex , nu se poate calcula");
+		else
+		{
+			var ans = "$$x_{1,2} = " 
+			+ answers.toString()+"$$"
+			+ "<br><br>Forma simplificata: " 
+			+ "\\("
+			+ math.simplify(a + "* x^2" +  " + " + b + "* x + " + c).toString() + "\\)";
+			$('.raspuns').html(ans);
+		}
+		 renderMathInElement(document.body);
+		 var htmlK = document.getElementsByClassName('katex-html');
+		 
+		 for(var i = 0 ; i < htmlK.length ; i++)
+		 htmlK[i].style.display = "none";
+		}
+	</script>
+	
+	
+  </body>
+
+</html>

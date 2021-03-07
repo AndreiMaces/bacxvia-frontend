@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+
+  <head>
+  
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="index.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+	
+	.optiune
+	{
+		display: block;
+		margin: 10px;
+		text-align: center;
+		width: 100%;
+	}
+	
+	</style>
+  
+  </head>
+
+  <body>
+	
+	<nav class="navbar navbar-default navbar-fixed-top">
+         <div class="container-fluid">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".baraNavigatie">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>  
+               </button>
+               <li class="navbar-brand Logo" href="#">Bacxvia</li>
+			   <style>.Logo:hover{cursor:default;}</style>
+            </div>
+            <div class="collapse navbar-collapse baraNavigatie">
+               <ul class="nav navbar-nav">
+                  <li><a href="../index.html">Acasa</a></li>
+				  
+               <li class="active">
+				<a href="../../../SubiecteMatematica/Matematica.html">Matematica</a>
+			  </li>
+			  
+			  
+			  <li>
+				<a href="../../../SubiecteRomana/Romana.html">Romana</a>
+			  </li>
+				  
+               </ul>
+            </div>
+         </div>
+      </nav>
+	
+	<div class="container" style="text-align: center;">
+		<button class="btn btn-default optiune" onclick="calcan()">Aflati termenul b<sub>n</sub></button>
+		<button class="btn btn-default optiune" onclick="calcn()">Aflati n</button>
+		<button class="btn btn-default optiune" onclick="calcr()">Aflati q</button>
+		<button class="btn btn-default optiune" onclick="calcsn()">Aflati S<sub>n</sub></button>
+		
+		<div class="input-group">
+			<span class="input-group-addon">b1</span>
+			<input type="text" class="form-control panou a1" placeholder="Introduceti primul element al progresiei">
+		</div>
+		<br>
+		<div class="input-group">
+			<span class="input-group-addon">n</span>
+			<input type="text" class="form-control panou n" placeholder="Introduceti numarul de elemente">
+		</div>
+		<br>
+		<div class="input-group">
+			<span class="input-group-addon">q</span>
+			<input type="text" class="form-control panou r" placeholder="Introduceti ratia">
+		</div>
+		<br>
+		<div class="input-group">
+			<span class="input-group-addon">Sn</span>
+			<input type="text" class="form-control panou sn" placeholder="Introduceti suma celor n elemente">
+		</div>
+		<br>
+		<div class="input-group">
+			<span class="input-group-addon">bn</span>
+			<input type="text" class="form-control panou an" placeholder="Introduceti elementul n al progresiei">
+		</div>
+		<br>
+		<div class="rezultat">
+		</div>
+		
+	</div>
+	
+  </body>
+
+</html>
