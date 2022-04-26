@@ -1,4 +1,6 @@
-# baxvia.github.io-
+# Bacxvia
+Numele proiectului este o contopire a numelui poetului renumit George Bacovia si litera x care 
+este des folosita drept notatie pentru variabile la matematica.
 ## De ce este folositor?
 Acest website este o unealta ajutatoare pentru elevii de clasa a 12-a 
 care urmeaza sa sustina examenul de bacalaureat
