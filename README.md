@@ -18,3 +18,4 @@ codul desi poate parea intimidant la inceput poate fi inteles cu usurinta
 ## Dezavantaje
 Datorita faptului ca nu au fost folosite metode avansate in conceperea website-ului,
 exista multe sectiuni de cod care se repeta, de exemplu bara de navigatie.
+*Link catre website: [Bacxvia](https://bacmateinfo.github.io/)
