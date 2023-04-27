@@ -1,0 +1,28 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+         <div class="container-fluid">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".baraNavigatie">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>  
+               </button>
+               <li class="navbar-brand Logo" href="#"><img src="../../../Images/Logo.png" class="navbar-logo"/></li>
+			   <style>.Logo:hover{cursor:default;}</style>
+            </div>
+            <div class="collapse navbar-collapse baraNavigatie">
+               <ul class="nav navbar-nav">
+                  <li><a href="../../../index.html">Acasa</a></li>
+				  
+               <li class="active">
+				<a href="../../../SubiecteMatematica/Matematica.html">Matematica</a>
+			  </li>
+			  
+			  
+			  <li>
+				<a href="../../../SubiecteRomana/Romana.html">Romana</a>
+			  </li>
+				  
+               </ul>
+            </div>
+         </div>
+      </nav>

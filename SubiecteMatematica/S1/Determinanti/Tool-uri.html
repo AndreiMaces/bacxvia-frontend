@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html>
+
+  <head>
+	<title>Determinanti</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="../../../Tools/bootstrap.css">
+    <script src="../../../Tools/jQuery.js"></script>
+    <script src="../../../Tools/bootstrap.js"></script>
+	<script src="index.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type ="text/css" href="../../../Tools/katex/katex.min.css" />
+	<script src="../../../Tools/math.js" type="text/javascript"></script>
+	<script src="../../../Tools/algebra-0.2.6.min.js" type="text/javascript"></script>
+	<script defer src = "../../../Tools/katex/katex.min.js"></script>
+	<script defer src = "../../../Tools/katex/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+	<script defer src="../../../Tools/katex/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+   <style>
+   *
+	{
+	  list-style: none;
+	}
+	</style>
+  </head>
+
+  <body>
+	
+	<nav class="navbar navbar-default navbar-fixed-top">
+         <div class="container-fluid">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".baraNavigatie">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>  
+               </button>
+               <li class="navbar-brand Logo" href="#"><img src="../../../Images/Logo.png" class="navbar-logo"/></li>
+			   <style>.Logo:hover{cursor:default;}</style>
+            </div>
+            <div class="collapse navbar-collapse baraNavigatie">
+               <ul class="nav navbar-nav">
+                  <li><a href="../../../index.html">Acasa</a></li>
+				  
+               <li class="active">
+				<a href="../../../SubiecteMatematica/Matematica.html">Matematica</a>
+			  </li>
+			  
+			  
+			  <li>
+				<a href="../../../Informatica/Informatica.html">Informatica</a>
+			  </li>
+				  
+               </ul>
+            </div>
+         </div>
+      </nav>
+	
+	<div class="container" style="text-align: center;">
+		<div class="input-group">
+			<span class="input-group-addon">n</span>
+			<input type="text" class="form-control panou n" placeholder="Introduceti gradul determinantului" onchange="create()">
+		</div>
+		<div class="input-group determinant">
+			<input type="text" class="form-control a11" placeholder="a11" >
+		</div>
+		<button class="btn btn-default calcul" onclick="calculeaza()">Calculeaza determinant</button>
+		<div style="margin: 50px;"><h1 class="Rezultat"></h1></div>
+	</div>
+	
+	<script>
+	
+	var n = $('.n').val();
+	var a = [];
+	
+	function initMatrix()
+	{
+		n = $('.n').val();
+		for(var i = 1 ; i <= n ; i++)
+			a[i] = new Array();
+		for(var i = 1 ; i <= n ; i++)
+			for(var j = 1 ; j <= n ; j++)
+				{
+					a[i][j] = parseFloat($('.a' + i + j).val());
+					//console.log($('.a' + i + j).val());
+				}
+	}
+	
+	function afisare(b)
+	{
+		for(var i = 1 ; i <= n ; i++)
+			for(var j = 1 ; j <= n ; j++)
+				console.log('.a'+i+j + " = " + a[i][j])
+	}
+	
+	function reset()
+	{
+		$('.determinant').html("");
+	}
+	
+	function input(i , j , width)
+	{
+		return "<div class=\"element\"><input type=\"text\" class=\"form-control a" + i + j+ "\" placeholder=\"a" + i + j + "\" style=\"width:" + (100/n).toString() + "%" + "\" ></div>";
+	}
+	
+	function generate(n)
+	{
+		n = $('.n').val();
+		for(var i = 1 ; i <= n ; i++)
+			for(var j = 1 ; j <= n ; j++)
+				$('.determinant').append(input(i,j));
+		
+	}
+	
+	function create()
+	{
+		n = $('.n').val();
+		reset();
+		generate(parseInt(n));
+	}
+	
+	function calculeaza()
+	{
+		initMatrix();
+		afisare(a);
+		$('.Rezultat').html(determinant(n , a).toString());
+	}
+	
+	function determinant (m , v)
+        {
+         
+            if (m == 2)
+            {
+                return (v[1][1] * v[2][2] - v[1][2] * v[2][1]); 
+            }
+            else
+            {
+                var s = 0;
+                var v1 = new Array();
+				for(var i = 1 ; i <= m ; i++)
+					v1[i] = new Array();
+				//for(var i = 1 ; i <= m ; i++)
+					//for(var j = 1 ; j <= m ; j++)
+						//v1[i][j] = 0;
+                for (var i = 1; i <= m; i++)
+                {
+                    var j22 = 0;
+                    for (var j1 = 1; j1 < m; j1++)
+                    {
+                        j22 = 0;
+                        for (var j2 = 1; j2 <= m; j2++)
+                        {
+                            if (j2+j22 == i) j22++;
+                            if (j1 > m || j2 > m) break;
+                            v1[j1][j2] = v[j1 + 1][j2 + j22];
+                        }
+                    }
+                    s += determinant(m - 1, v1) * Math.pow(-1, 1 + i) * v[1][i]; 
+                   
+                }
+                return s;
+            }
+            return -1;
+
+        }
+	
+	
+	</script>
+	
+  </body>
+
+</html>

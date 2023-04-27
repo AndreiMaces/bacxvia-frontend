@@ -2,7 +2,7 @@
 <html>
   
   <head>
-	<title>Progresii geometrice</title>
+	<title>Limite</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" href="../../../Tools/bootstrap.css">
     <script src="../../../Tools/jQuery.js"></script>
@@ -19,6 +19,11 @@
 	<script defer src="../../../Tools/katex/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
 	<style>
 	
+	*
+	{
+	  list-style: none;
+	}
+	
 	.optiune
 	{
 		display: block;
@@ -27,12 +32,8 @@
 		width: 100%;
 	}
 	
-	
-   *
-	{
-	  list-style: none;
-	}
 	</style>
+	
   </head>
 
   <body>
@@ -65,39 +66,41 @@
             </div>
          </div>
       </nav>
-	
+	<style>.input-group{margin-top: 20px;}</style>
 	<div class="container" style="text-align: center;">
-		<button class="btn btn-default optiune" onclick="calcan()">Aflati termenul b<sub>n</sub></button>
-		<button class="btn btn-default optiune" onclick="calcn()">Aflati n</button>
-		<button class="btn btn-default optiune" onclick="calcr()">Aflati q</button>
-		<button class="btn btn-default optiune" onclick="calcsn()">Aflati S<sub>n</sub></button>
+		<!-- <button class="btn btn-default optiune" onclick="normala()">Limita</button>
+		<button class="btn btn-default optiune" onclick="stanga()">Limita la stanga</button>
+		<button class="btn btn-default optiune" onclick="dreapta()">Limita la dreapta</button>
+		
+		<div class="input-group Norm" style="display: none;">
+			<span class="input-group-addon">\(x \rightarrow \)</span>
+			<input type="text" class="form-control panou Z" placeholder="Introduceti capatul limitei">
+			
+		</div>
+		
+		<div class="input-group Stanga" style="display: none;">
+			<span class="input-group-addon">\(x \nearrow \)</span>
+			<input type="text" class="form-control panou Z" placeholder="Introduceti capatul limitei">
+			
+		</div>
+		
+		<div class="input-group Dreapta" style="display: none;">
+			<span class="input-group-addon">\(x \searrow \)</span>
+			<input type="text" class="form-control panou Z" placeholder="Introduceti capatul limitei">
+			
+		</div>
 		
 		<div class="input-group">
-			<span class="input-group-addon">b1</span>
-			<input type="text" class="form-control panou a1" placeholder="Introduceti primul element al progresiei">
-		</div>
-		<br>
+			<span class="input-group-addon">\(f(x)\)</span>
+			<input type="text" class="form-control panou l" placeholder="Introduceti functia">
+		</div> -->
+		<button class="btn btn-default optiune" onclick="calculeazaDerivata()">Derivata</button>
 		<div class="input-group">
-			<span class="input-group-addon">n</span>
-			<input type="text" class="form-control panou n" placeholder="Introduceti numarul de elemente">
+			<span class="input-group-addon">\(f(x)\)</span>
+			<input type="text" class="form-control panou l" placeholder="Introduceti functia">
 		</div>
 		<br>
-		<div class="input-group">
-			<span class="input-group-addon">q</span>
-			<input type="text" class="form-control panou r" placeholder="Introduceti ratia">
-		</div>
-		<br>
-		<div class="input-group">
-			<span class="input-group-addon">Sn</span>
-			<input type="text" class="form-control panou sn" placeholder="Introduceti suma celor n elemente">
-		</div>
-		<br>
-		<div class="input-group">
-			<span class="input-group-addon">bn</span>
-			<input type="text" class="form-control panou an" placeholder="Introduceti elementul n al progresiei">
-		</div>
-		<br>
-		<div class="rezultat">
+		<div class="rezultat" style="font-size: 25px;">
 		</div>
 		
 	</div>

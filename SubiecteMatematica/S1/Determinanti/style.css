@@ -1,0 +1,172 @@
+*
+{
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style: none;
+}
+
+.romana
+{
+	width: 50vw;
+	height: 100vh;
+	background: black;
+	text-align: center;
+	font-size: 40px;
+}
+
+.mate
+{
+	width: 50vw;
+	height: 100vh;
+	background: red;
+	text-align: center;
+	font-size: 40px;
+}
+
+.flex-container
+{
+	display: flex;
+}
+
+.romana h1
+{
+	position: absolute;
+	top: 50%;
+	transform: translate(0% , -50%);
+	width: 50%;
+}
+
+.mate h1
+{
+	position: absolute;
+	top: 50%;
+	transform: translate(0% , -50%);
+	width: 50%;
+}
+
+.white
+{
+	color: white;
+}
+
+.fe
+{
+	width: 33.2%;
+	display: inline-block;
+	height: 20vh;
+	text-align: center;
+	background: yellow;
+	margin: 0 0 0 -4px;
+	border: 1px solid black;
+}
+
+.fe h1
+{
+	line-height: 20vh;
+}
+
+.yellow
+{
+	color: yellow;
+}
+
+.s
+{
+	width: 100vw;
+	height: 32.9vh;
+	background: #42a7f5;
+	border: 0.3vh solid cyan;
+	text-align: center;
+	font-size: 2vw;
+	
+}
+
+.s h1
+{
+	line-height: 32.9vh;
+	color: white;
+	text-shadow: 2px 2px 3px black;
+}
+
+.sr
+{
+	overflow: hidden;
+}
+
+.matrice
+{
+	display: flex;
+	box-shadow: 2px 2px 5px black;
+	padding: 30px;
+}
+
+.container
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50% , -50%);
+	width: 100%;
+	height: 80%;
+}
+
+a
+{
+	color: black;
+}
+
+.cercTrigonometric
+{
+	border: 1px solid black;
+	
+}
+
+.unghi
+{
+	padding: 5px 10px;
+	margin: 10px;
+}
+
+.navbar-logo
+{
+	width: auto;
+	height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+		.titlu
+		{
+			width: 60vw;
+			height: auto !important;
+		}
+
+}
+
+.determinant
+{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	margin:50px auto 0 auto;
+	width: 100%;
+}
+
+.element
+{
+  flex: 1 1 auto !important;
+  box-sizing:border-box !important;
+  text-align:center !important;
+  line-height:20px !important;
+}
+
+.element input
+{
+	margin: 20px 0;
+}
+
+.calcul
+{
+	margin: 40px;
+}

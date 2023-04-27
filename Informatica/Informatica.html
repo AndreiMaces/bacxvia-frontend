@@ -1,0 +1,229 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <title>Informatica</title>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+      <link rel="stylesheet" href="../Tools/bootstrap.css">
+      <link rel="stylesheet" href="../Tools/design.css">
+      <script src="../Tools/jQuery.js"></script>
+      <script src="../Tools/bootstrap.js"></script>
+      <script src="../Tools/design.js"></script>
+      <script src="index.js"></script>
+      <meta charset="UTF-8">
+	  <script src="../Tools/desmos.js" type="text/javascript"></script>
+	  <script src="../../Tools/algebra-0.2.6.min.js" type="text/javascript"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type ="text/css" href="../Tools/katex/katex.min.css" />
+      <script defer src = "../Tools/katex/katex.min.js"></script>
+      <script defer src = "../Tools/katex/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+      <script defer src="../Tools/katex/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+   </head>
+   <body>
+      <div class="loader">
+         <div class="fcenter" style="width: 80vw;">
+            <h1 class="pi" style="opacity: 1;">float pi = 3.14</h1>
+         </div>
+      </div>
+      <script>
+         var v = [1 ,5 ,9 ,2 ,6 ,5,3,5,8,9,7,9,3,2,3,8,4,6,2,6,4,3,3,8,3,2,7,9,5,0,2,8,8,4,1,9,7,1,6,9,3,9,9,3,7,5,1,0,5,8,2,0,9,7,4,9,4,4,5,9,2,3,0,7,8,1,6,4,0,6,2,8,6,2,0,8,9,9,8,6,2,8,0,3,4,8,2,5,3,4,2,1,1,1];
+         var p = 1;
+         var i = 0;
+         
+         function adauga()
+         {
+         	if(p == 0) return;
+         	if(($('.pi').html()).length < 50)
+         		{
+         		console.log($('.pi').html());
+         			$(".pi").append(v[i]);
+         			i++;
+         			
+         			setTimeout(function() {
+         			adauga();
+         			}, 50);
+         			
+         			
+         		}
+         	else {
+         	$('.pi').html('π = 3.14');
+         	i = 0;
+         	adauga();
+         	}
+         }
+         adauga();
+          
+          
+      </script>
+      <style>
+         .fullyCentered
+         {
+         position: absolute;
+         z-index: 10001;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50% , -50%);
+         width: 80vw;
+         }
+         .loader
+         {
+         width: 100vw;
+         height: 100vh;
+         overflow: hidden;
+         background-color: white;
+         position: fixed;
+         z-index: 1000000;
+         }
+      </style>
+      <script>
+         $(document).ready(function() {p = 0;$('.loader').css("display" , "none");});
+         
+      </script>
+      <nav class="navbar navbar-default navbar-fixed-top">
+         <div class="container-fluid">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".baraNavigatie">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>  
+               </button>
+               <li class="navbar-brand Logo" href="#"><img src="../Images/Logo.png" class="navbar-logo invert"/></li>
+               <style>.Logo:hover{cursor:default;}</style>
+            </div>
+            <div class="collapse navbar-collapse baraNavigatie">
+               <ul class="nav navbar-nav">
+                  <li><a href="../index.html">Acasa</a></li>
+                  <li>
+                     <a href="../SubiecteMatematica/Matematica.html">Matematica</a>
+                  </li>
+                  <li class="active">
+                     <a  href="../Informatica/Informatica.html">Informatica</a>
+                  </li>
+               </ul>
+			   <ul class="nav navbar-nav navbar-right">
+			<li>
+				<a onclick="Invert()">Inverseaza</a>
+			</li>
+			</ul>
+            </div>
+         </div>
+      </nav>
+      <div class="jumbotron bg-static" style="height: 50vh; padding:0; background-image: url('../Images/jumbotron-informatica.jpg')">
+         <div class="fpanel invert" style="background: rgba(0, 0, 0 , 0.5)">
+			<h1 class="fcenter fade" style="color: #eee">Informatica</h1>
+		 </div>
+      </div>
+	  <div class="row vw-100">
+      <div class="col-lg-2 ad-wrapper_t"></div>
+      <div class="col-lg-8">
+	    <div class="panel-group" id="Subiectul2">
+		  <div class="panel panel-default">
+		    <div class="panel-heading text-center" data-toggle="collapse" data-parent="#Subiectul2" href="#collapse1">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#Subiectul2" href="#collapse1">Limbajul C++</a>
+              </h4>
+            </div>
+			<div id="collapse1" class="panel-collapse collapse">
+			  <div class="panel-body">
+			    <div class="panel-group" id="Algebra">
+                  
+				  <div class="panel panel-default">
+				    <div class="panel-heading text-center" data-toggle="collapse" data-parent="#Algebra" href="#collapse1003">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#Algebra" href="#collapse1003">Variabile</a>
+                      </h4>
+                    </div>
+					<div id="collapse1003" class="panel-collapse collapse">
+                      <div class="panel-body">
+					  </div>
+					</div>
+				  </div>
+				  
+				  <div class="panel panel-default">
+				    <div class="panel-heading text-center" data-toggle="collapse" data-parent="#Algebra" href="#collapse1004">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#Algebra" href="#collapse1004">Structuri repetitive</a>
+                      </h4>
+                    </div>
+					<div id="collapse1004" class="panel-collapse collapse">
+                      <div class="panel-body">
+					  </div>
+					</div>
+				  </div>
+				  
+				  <div class="panel panel-default">
+				    <div class="panel-heading text-center" data-toggle="collapse" data-parent="#Algebra" href="#collapse1005">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#Algebra" href="#collapse1005">Functii</a>
+                      </h4>
+                    </div>
+					<div id="collapse1005" class="panel-collapse collapse">
+                      <div class="panel-body">
+					  </div>
+					</div>
+				  </div>
+				  
+				  <div class="panel panel-default">
+				    <div class="panel-heading text-center" data-toggle="collapse" data-parent="#Algebra" href="#collapse1006">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#Algebra" href="#collapse1003">Programare bazata pe obiecte</a>
+                      </h4>
+                    </div>
+					<div id="collapse1006" class="panel-collapse collapse">
+                      <div class="panel-body">
+					  </div>
+					</div>
+				  </div>
+				  
+				  <div class="panel panel-default">
+				    <div class="panel-heading text-center" data-toggle="collapse" data-parent="#Algebra" href="#collapse1001">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#Algebra" href="#collapse1001">&lt;string.h&gt; (cstring)</a>
+                      </h4>
+                    </div>
+					<div id="collapse1001" class="panel-collapse collapse">
+                      <div class="panel-body">
+					    <h1>Copiere</h1>
+						<p><b>strcpy(char *destinatie , char *sursa)</b> - Copiaza sirul din sursa in sirul destinatie, inclusiv caracterul NULL de la final.</p>
+						<p><b>strncpy(char *destinatie , char *sursa , int x)</b> - Copiaza primele x caractere din sirul sursa in sirul destinatie.</p>
+						<h1>Concatenare</h1>
+						<p><b>strcat(char *destinatie , char *sursa)</b> - Concateneaza o copie a sirului sursa la sirul destinatie</p>
+						<p><b>strncat(char *destinatie , char *sursa , int x)</b> - Concateneaza o copie a primelor x caractere din sirul sursa la sirul destinatie.</p>
+						<h1>Comparare</h1>
+						<p><b>strcmp(char *str1 , char *str2)</b> - Compara sirul str1 cu sirul str2 litera cu litera. Returneaza -1 daca str1 &lt; str2 , 0 daca str1 = str2 sau 1 daca str1 &gt; str2</p>
+						<p><b>strncmp(char *str1 , char *str2 , int x)</b> - Compara primele n caractere din sirul str1 cu sirul str2 litera cu litera.</p>
+						<h1>Cautare</h1>
+						<p><b>strchr(char *str , char c)</b> - Returneaza adresa la care se gaseste prima data caracterul c in sirul str</p>
+						<p><b>strcspn(char *str1 , char *str2)</b> - Returneaza indexul la care se gaseste prima data un caracter din sirul str2 in sirul str</p>
+						<p><b>strchr(char *str1 , char c)</b> - Returneaza ultima adresa la care se gaseste caracterul c in sirul str1</p>
+						<p><b>strstr(char *str1 , char *str2)</b> - Returneaza prima adresa la care se gaseste sirul str2 in sirul str1 si NULL in cazul in care sirul str2 nu face parte din sirul str1</p>
+						<p><b>strtok(char *str , char *delimitatori)</b> - O secventa de apeluri a acestei functii va imparti sirul str in mai multe parti. La primul apel se va introduce un sir pentru str al carei prim caracter este folosit ca adresa de inceput pentru cautare. In apelurile ulterioare se va introduce NULL pentru str. Functia introduce NULL in locul in care gaseste un caracter din sirul delimitatori si returneaza adresa lui str.</p>
+						<h1>Altele</h1>
+						<p><b>strlen(char *str)</b> - Returneaza lungimea sirului str</p>
+					  </div>
+					</div>
+				  </div>
+				  
+				  <div class="panel panel-default">
+				    <div class="panel-heading text-center" data-toggle="collapse" data-parent="#Algebra" href="#collapse1002">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#Algebra" href="#collapse1002">&lt;math.h&gt; (cmath)</a>
+                      </h4>
+                    </div>
+					<div id="collapse1002" class="panel-collapse collapse">
+                      <div class="panel-body">
+					    <p><b>pow(double x , double y)</b> - Returneaza x la puterea y</p>
+					    <p><b>sqrt(double x)</b> - Returneaza radcin patrata a lui x</p>
+					    <p><b>abs(double x)</b> - Returneaza modul de x</p>
+					  </div>
+					</div>
+				  </div>
+				  
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+      <div class="col-lg-2 ad-wrapper_t"></div>
+   </body>
+</html>
